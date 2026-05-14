@@ -1,0 +1,37 @@
+# A3a with 250 training samples per fold
+# ~large personal playlist worth of annotations
+
+defaults:
+  - base
+
+experiment:
+  name: "A3a_n250"
+  tags: ["data_efficiency", "lora", "ordinal_ce", "subsample"]
+
+data:
+  train_subsample_n: 250
+  num_workers: 0
+
+model:
+  tuning_mode: "lora"
+  pooling: "attention"
+  head_layers: 3
+  head_hidden_dim: 512
+  lora:
+    r: 16
+    alpha: 32
+    target_modules: ["q_proj", "k_proj", "v_proj", "out_proj"]
+    dropout: 0.1
+
+loss:
+  type: "ordinal_ce"
+  ordinal_bins: 5
+  ordinal_sigma: 0.5
+  uncertainty_weighting: false
+  bias_calibration: false
+
+training:
+  epochs: 30
+  batch_size: 16
+  lr: 1.0e-4
+  gradient_checkpointing: false

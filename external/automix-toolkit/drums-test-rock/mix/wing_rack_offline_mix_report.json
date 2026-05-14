@@ -1,0 +1,1148 @@
+{
+  "input_dir": "external/automix-toolkit/drums-test-rock/tracks",
+  "output": "external/automix-toolkit/drums-test-rock/mix/wing_rack_offline_mix.mp3",
+  "sample_rate": 44100,
+  "codex_orchestrator": {
+    "enabled": false,
+    "dry_run": false,
+    "llm_enabled": true,
+    "mode": "direct",
+    "max_actions_per_cycle": 5,
+    "proposed_actions": [
+      {
+        "action_type": "reduce_gain",
+        "channel": 1,
+        "parameters": {
+          "channel": 1,
+          "amount_db": -3.0
+        },
+        "priority": 1,
+        "confidence": 1.0,
+        "reason": "True peak at 3.8dBTP exceeds -0.5dBTP limit",
+        "source": "rule_engine",
+        "timestamp": 1776416717.324908,
+        "risk": "medium",
+        "expected_effect": "",
+        "rollback_hint": ""
+      },
+      {
+        "action_type": "adjust_gain",
+        "channel": 1,
+        "parameters": {
+          "channel": 1,
+          "target_peak_db": -12.0,
+          "adjustment_db": -3.0
+        },
+        "priority": 2,
+        "confidence": 0.85,
+        "reason": "Peak level at 3.8dB (target: -12dB)",
+        "source": "rule_engine",
+        "timestamp": 1776416717.324908,
+        "risk": "medium",
+        "expected_effect": "",
+        "rollback_hint": ""
+      }
+    ],
+    "proposed_count": 2,
+    "applied_count": 2,
+    "pending_before_approve": 0
+  },
+  "duration_sec": 26.36,
+  "final_peak_dbfs": -3.43,
+  "final_lufs": -15.98,
+  "music_bed_lufs": -24.2,
+  "vocal_bed_balance": {},
+  "bass_drum_boost": {
+    "enabled": false
+  },
+  "cross_adaptive_eq": {
+    "enabled": true,
+    "raw_adjustments": 98,
+    "applied_adjustments": 18,
+    "skipped_adjustments": 54,
+    "channel_priorities": {
+      "1": 2,
+      "2": 2,
+      "3": 4,
+      "4": 3,
+      "5": 3,
+      "6": 4,
+      "7": 4,
+      "8": 4
+    },
+    "applied": [
+      {
+        "channel": 4,
+        "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 3,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 4,
+        "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 3,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 4,
+        "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 3,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 5,
+        "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 3,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 5,
+        "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 3,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 5,
+        "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 3,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "priority": 4,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -2.05,
+        "q": 4.0,
+        "source_count": 3
+      },
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "priority": 4,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -2.5,
+        "q": 4.0,
+        "source_count": 4
+      },
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "priority": 4,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -2.5,
+        "q": 4.0,
+        "source_count": 3
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -0.53,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -0.58,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 40.0,
+        "band": "sub",
+        "gain_db": -1.22,
+        "q": 4.0,
+        "source_count": 3
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 4,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      }
+    ]
+  },
+  "dynamic_vocal_priority": {},
+  "kick_presence_boost": {
+    "enabled": false
+  },
+  "kick_focus_cymbal_cut": {
+    "enabled": false
+  },
+  "soft_master": false,
+  "master_target_lufs": -16.0,
+  "codex_corrections": {
+    "enabled": false,
+    "actions": []
+  },
+  "codex_bleed_control": {
+    "enabled": false
+  },
+  "event_based_dynamics": {
+    "enabled": true,
+    "changes": [
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "analysis_active_ratio": 0.0941,
+        "analysis_threshold_db": -24.12,
+        "range_db": 5.0,
+        "open_ms": 14.0,
+        "close_ms": 160.0,
+        "hold_ms": 180.0,
+        "reason": "Event-based activity windows drive a soft expander so bleed between hits or phrases does not keep the channel artificially open."
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "analysis_active_ratio": 0.0383,
+        "analysis_threshold_db": -18.5,
+        "range_db": 12.0,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "reason": "Event-based activity windows drive a soft expander so bleed between hits or phrases does not keep the channel artificially open."
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "analysis_active_ratio": 0.0205,
+        "analysis_threshold_db": -16.02,
+        "range_db": 12.0,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "reason": "Event-based activity windows drive a soft expander so bleed between hits or phrases does not keep the channel artificially open."
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "analysis_active_ratio": 0.0482,
+        "analysis_threshold_db": -16.94,
+        "range_db": 12.0,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "reason": "Event-based activity windows drive a soft expander so bleed between hits or phrases does not keep the channel artificially open."
+      }
+    ],
+    "notes": [
+      "Lead and backing vocals get a gentle downward expander between phrases.",
+      "Rack and floor toms get a stronger event-based expander between hits.",
+      "Kick, snare, and cymbal spot mics also use event-based expansion when bleed would otherwise keep them open.",
+      "Ambient microphones such as overheads and rooms stay ungated."
+    ]
+  },
+  "fx": {
+    "enabled": true,
+    "tempo_bpm": 120.0,
+    "plan": {
+      "buses": [
+        {
+          "bus_id": 13,
+          "name": "Vocal Plate",
+          "fx_type": "reverb",
+          "fx_slot": "FX1",
+          "model": "PLATE",
+          "return_level_db": -4.0,
+          "params": {
+            "decay_s": 1.55,
+            "predelay_ms": 42.0,
+            "density": 0.72,
+            "brightness": 0.58
+          },
+          "hpf_hz": 220.0,
+          "lpf_hz": 7800.0,
+          "duck_source": "lead_vocal",
+          "duck_depth_db": 1.8,
+          "reason": "Lead vocal needs depth while dry vocal remains forward."
+        },
+        {
+          "bus_id": 14,
+          "name": "Drum Room",
+          "fx_type": "reverb",
+          "fx_slot": "FX2",
+          "model": "ROOM",
+          "return_level_db": -4.0,
+          "params": {
+            "decay_s": 0.72,
+            "predelay_ms": 10.0,
+            "density": 0.86,
+            "brightness": 0.42
+          },
+          "hpf_hz": 180.0,
+          "lpf_hz": 5600.0,
+          "duck_source": null,
+          "duck_depth_db": 0.0,
+          "reason": "Short dense drum space supports snare/toms without washing overheads."
+        },
+        {
+          "bus_id": 15,
+          "name": "Tempo Delay",
+          "fx_type": "delay",
+          "fx_slot": "FX3",
+          "model": "STEREO_DELAY",
+          "return_level_db": -0.5,
+          "params": {
+            "left_delay_ms": 375.0,
+            "right_delay_ms": 500.0,
+            "feedback": 0.22,
+            "width": 0.85
+          },
+          "hpf_hz": 260.0,
+          "lpf_hz": 5200.0,
+          "duck_source": "lead_vocal",
+          "duck_depth_db": 4.0,
+          "reason": "Tempo delay is audible in vocal gaps, not over lyric consonants."
+        },
+        {
+          "bus_id": 16,
+          "name": "Mod Doubler",
+          "fx_type": "chorus",
+          "fx_slot": "FX4",
+          "model": "CHORUS",
+          "return_level_db": -11.0,
+          "params": {
+            "left_delay_ms": 11.0,
+            "right_delay_ms": 17.0,
+            "depth": 0.16,
+            "rate_hz": 0.45
+          },
+          "hpf_hz": 220.0,
+          "lpf_hz": 8500.0,
+          "duck_source": null,
+          "duck_depth_db": 0.0,
+          "reason": "Subtle stereo modulation widens backing parts without moving the lead center."
+        }
+      ],
+      "sends": [
+        {
+          "channel_id": 2,
+          "instrument": "snare",
+          "bus_id": 14,
+          "send_db": -17.0,
+          "post_fader": true,
+          "reason": "short drum room/plate support"
+        },
+        {
+          "channel_id": 3,
+          "instrument": "hi_hat",
+          "bus_id": 14,
+          "send_db": -32.0,
+          "post_fader": true,
+          "reason": "very low room only to avoid harsh wash"
+        },
+        {
+          "channel_id": 6,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -19.0,
+          "post_fader": true,
+          "reason": "tom depth follows drum room"
+        },
+        {
+          "channel_id": 7,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -19.0,
+          "post_fader": true,
+          "reason": "tom depth follows drum room"
+        },
+        {
+          "channel_id": 8,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -19.0,
+          "post_fader": true,
+          "reason": "tom depth follows drum room"
+        }
+      ],
+      "notes": [
+        "Shared stereo FX returns; no per-channel insert reverbs by default.",
+        "FX sends are post-fader so agent balance moves preserve wet/dry ratio.",
+        "Returns are filtered to keep low end clear and vocal presence readable.",
+        "Vocal plate and tempo delay are ducked from lead vocal activity."
+      ]
+    },
+    "returns": [
+      {
+        "bus_id": 14,
+        "name": "Drum Room",
+        "fx_type": "reverb",
+        "fx_slot": "FX2",
+        "model": "ROOM",
+        "return_level_db": -4.0,
+        "params": {
+          "decay_s": 0.72,
+          "predelay_ms": 10.0,
+          "density": 0.86,
+          "brightness": 0.42
+        },
+        "hpf_hz": 180.0,
+        "lpf_hz": 5600.0,
+        "duck_source": null,
+        "duck_depth_db": 0.0,
+        "reason": "Short dense drum space supports snare/toms without washing overheads.",
+        "active_send_count": 5,
+        "return_peak_dbfs": -30.47
+      }
+    ],
+    "sends_by_bus": {
+      "13": [],
+      "14": [
+        {
+          "channel_id": 2,
+          "instrument": "snare",
+          "bus_id": 14,
+          "send_db": -17.0,
+          "post_fader": true,
+          "reason": "short drum room/plate support",
+          "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav"
+        },
+        {
+          "channel_id": 3,
+          "instrument": "hi_hat",
+          "bus_id": 14,
+          "send_db": -32.0,
+          "post_fader": true,
+          "reason": "very low room only to avoid harsh wash",
+          "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav"
+        },
+        {
+          "channel_id": 6,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -19.0,
+          "post_fader": true,
+          "reason": "tom depth follows drum room",
+          "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav"
+        },
+        {
+          "channel_id": 7,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -19.0,
+          "post_fader": true,
+          "reason": "tom depth follows drum room",
+          "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav"
+        },
+        {
+          "channel_id": 8,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -19.0,
+          "post_fader": true,
+          "reason": "tom depth follows drum room",
+          "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav"
+        }
+      ],
+      "15": [],
+      "16": []
+    }
+  },
+  "master_processing": {
+    "final_limiter": true,
+    "soft_limiter": true,
+    "ceiling_dbfs": -1.0,
+    "pre_master_peak_dbfs": -3.43,
+    "pre_master_lufs": -20.59,
+    "post_master_lufs": -15.98
+  },
+  "live_channel_headroom": {
+    "enabled": false
+  },
+  "phase_alignment": [],
+  "drum_pan_rule": {
+    "enabled": false,
+    "reason": "overhead_pair_not_found"
+  },
+  "agent_actions": [
+    {
+      "type": "adjust_gain",
+      "channel": 1,
+      "parameters": {
+        "channel": 1,
+        "target_peak_db": -12.0,
+        "adjustment_db": -3.0
+      },
+      "confidence": 0.85,
+      "reason": "Peak level at 3.8dB (target: -12dB)",
+      "source": "rule_engine",
+      "timestamp": 1776416717.324908,
+      "risk": "medium",
+      "expected_effect": "",
+      "rollback_hint": ""
+    },
+    {
+      "type": "reduce_gain",
+      "channel": 1,
+      "parameters": {
+        "channel": 1,
+        "amount_db": -3.0
+      },
+      "confidence": 1.0,
+      "reason": "True peak at 3.8dBTP exceeds -0.5dBTP limit",
+      "source": "rule_engine",
+      "timestamp": 1776416717.324908,
+      "risk": "medium",
+      "expected_effect": "",
+      "rollback_hint": ""
+    }
+  ],
+  "agent_audit": [
+    {
+      "timestamp": 1776416717.3519669,
+      "status": "applied",
+      "detail": "Applied to mixer",
+      "type": "adjust_gain",
+      "channel": 1,
+      "parameters": {
+        "channel": 1,
+        "target_peak_db": -12.0,
+        "adjustment_db": -3.0
+      },
+      "confidence": 0.85,
+      "reason": "Peak level at 3.8dB (target: -12dB)",
+      "source": "rule_engine",
+      "risk": "medium"
+    },
+    {
+      "timestamp": 1776416717.351958,
+      "status": "applied",
+      "detail": "Applied to mixer",
+      "type": "reduce_gain",
+      "channel": 1,
+      "parameters": {
+        "channel": 1,
+        "amount_db": -3.0
+      },
+      "confidence": 1.0,
+      "reason": "True peak at 3.8dBTP exceeds -0.5dBTP limit",
+      "source": "rule_engine",
+      "risk": "medium"
+    }
+  ],
+  "virtual_console_calls": [
+    {
+      "cmd": "set_fader",
+      "channel": 1,
+      "value_db": -3.0
+    },
+    {
+      "cmd": "set_fader",
+      "channel": 1,
+      "value_db": -6.0
+    }
+  ],
+  "channels": [
+    {
+      "channel": 1,
+      "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "kick",
+      "trim_db": 8.61,
+      "agent_fader_db": -6.0,
+      "pan": 0.0,
+      "hpf": 35.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -18,
+        "ratio": 4.0,
+        "attack_ms": 8,
+        "release_ms": 90
+      },
+      "event_expander": {
+        "enabled": false
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "cross_adaptive_eq": [],
+      "peak_db": -4.85,
+      "rms_db": -28.61,
+      "analysis_mode": "windowed_full_track_fallback",
+      "analysis_active_sec": 18.0,
+      "analysis_active_ratio": 0.6829,
+      "analysis_threshold_db": -18.81
+    },
+    {
+      "channel": 2,
+      "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "snare",
+      "trim_db": -2.09,
+      "agent_fader_db": 0.0,
+      "pan": 0.0,
+      "hpf": 110.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -19,
+        "ratio": 3.0,
+        "attack_ms": 8,
+        "release_ms": 130
+      },
+      "event_expander": {
+        "enabled": false
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "cross_adaptive_eq": [],
+      "peak_db": 0.0,
+      "rms_db": -20.91,
+      "analysis_mode": "windowed_full_track_fallback",
+      "analysis_active_sec": 18.0,
+      "analysis_active_ratio": 0.6829,
+      "analysis_threshold_db": -10.89
+    },
+    {
+      "channel": 3,
+      "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "hi_hat",
+      "trim_db": -4.99,
+      "agent_fader_db": 0.0,
+      "pan": 0.0,
+      "hpf": 180.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -18,
+        "ratio": 1.8,
+        "attack_ms": 18,
+        "release_ms": 180
+      },
+      "event_expander": {
+        "enabled": true,
+        "mode": "event_based_expander",
+        "range_db": 5.0,
+        "threshold_db": -24.12,
+        "open_ms": 14.0,
+        "close_ms": 160.0,
+        "hold_ms": 180.0,
+        "active_ratio": 0.1463,
+        "active_sec": 3.84,
+        "max_reduction_db": 5.0,
+        "mean_reduction_inactive_db": 4.84,
+        "mean_reduction_active_db": 0.01
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 3,
+          "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "hi_hat",
+          "priority": 4,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -2.5,
+          "q": 4.0,
+          "source_count": 4
+        },
+        {
+          "channel": 3,
+          "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "hi_hat",
+          "priority": 4,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -2.5,
+          "q": 4.0,
+          "source_count": 3
+        },
+        {
+          "channel": 3,
+          "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "hi_hat",
+          "priority": 4,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -2.05,
+          "q": 4.0,
+          "source_count": 3
+        }
+      ],
+      "peak_db": -0.98,
+      "rms_db": -23.01,
+      "analysis_mode": "event_based",
+      "analysis_active_sec": 2.48,
+      "analysis_active_ratio": 0.0941,
+      "analysis_threshold_db": -24.12
+    },
+    {
+      "channel": 4,
+      "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "custom",
+      "trim_db": -5.94,
+      "agent_fader_db": 0.0,
+      "pan": 0.0,
+      "hpf": 80.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -20,
+        "ratio": 2.0,
+        "attack_ms": 10,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": false
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 4,
+          "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 3,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 4,
+          "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 3,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 4,
+          "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 3,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": 0.0,
+      "rms_db": -18.06,
+      "analysis_mode": "windowed_full_track",
+      "analysis_active_sec": 18.0,
+      "analysis_active_ratio": 0.6829,
+      "analysis_threshold_db": null
+    },
+    {
+      "channel": 5,
+      "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "custom",
+      "trim_db": 6.27,
+      "agent_fader_db": 0.0,
+      "pan": 0.0,
+      "hpf": 80.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -20,
+        "ratio": 2.0,
+        "attack_ms": 10,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": false
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 5,
+          "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 3,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 5,
+          "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 3,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 5,
+          "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 3,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": -7.24,
+      "rms_db": -30.27,
+      "analysis_mode": "windowed_full_track",
+      "analysis_active_sec": 18.0,
+      "analysis_active_ratio": 0.6829,
+      "analysis_threshold_db": null
+    },
+    {
+      "channel": 6,
+      "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "rack_tom",
+      "trim_db": -5.49,
+      "agent_fader_db": 0.0,
+      "pan": -0.2,
+      "hpf": 65.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -22,
+        "ratio": 3.0,
+        "attack_ms": 12,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": true,
+        "mode": "event_based_expander",
+        "range_db": 12.0,
+        "threshold_db": -18.5,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "active_ratio": 0.0587,
+        "active_sec": 1.54,
+        "max_reduction_db": 12.0,
+        "mean_reduction_inactive_db": 11.86,
+        "mean_reduction_active_db": 0.02
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 6,
+          "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 6,
+          "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 6,
+          "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -0.53,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": -4.3,
+      "rms_db": -19.51,
+      "analysis_mode": "event_based",
+      "analysis_active_sec": 1.01,
+      "analysis_active_ratio": 0.0383,
+      "analysis_threshold_db": -18.5
+    },
+    {
+      "channel": 7,
+      "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "rack_tom",
+      "trim_db": -9.1,
+      "agent_fader_db": 0.0,
+      "pan": -0.2,
+      "hpf": 65.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -22,
+        "ratio": 3.0,
+        "attack_ms": 12,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": true,
+        "mode": "event_based_expander",
+        "range_db": 12.0,
+        "threshold_db": -16.02,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "active_ratio": 0.0307,
+        "active_sec": 0.805,
+        "max_reduction_db": 12.0,
+        "mean_reduction_inactive_db": 11.91,
+        "mean_reduction_active_db": 0.02
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 7,
+          "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 7,
+          "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 7,
+          "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -0.58,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": -0.51,
+      "rms_db": -15.9,
+      "analysis_mode": "event_based",
+      "analysis_active_sec": 0.54,
+      "analysis_active_ratio": 0.0205,
+      "analysis_threshold_db": -16.02
+    },
+    {
+      "channel": 8,
+      "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "rack_tom",
+      "trim_db": -6.95,
+      "agent_fader_db": 0.0,
+      "pan": -0.2,
+      "hpf": 65.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -22,
+        "ratio": 3.0,
+        "attack_ms": 12,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": true,
+        "mode": "event_based_expander",
+        "range_db": 12.0,
+        "threshold_db": -16.94,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "active_ratio": 0.0707,
+        "active_sec": 1.854,
+        "max_reduction_db": 12.0,
+        "mean_reduction_inactive_db": 11.86,
+        "mean_reduction_active_db": 0.01
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 8,
+          "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 8,
+          "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 8,
+          "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 4,
+          "frequency_hz": 40.0,
+          "band": "sub",
+          "gain_db": -1.22,
+          "q": 4.0,
+          "source_count": 3
+        }
+      ],
+      "peak_db": -0.37,
+      "rms_db": -18.05,
+      "analysis_mode": "event_based",
+      "analysis_active_sec": 1.27,
+      "analysis_active_ratio": 0.0482,
+      "analysis_threshold_db": -16.94
+    }
+  ]
+}

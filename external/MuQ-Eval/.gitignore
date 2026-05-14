@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Training outputs
+outputs/
+cache/
+
+# Weights & Biases
+wandb/
+.wandb/
+
+# Model checkpoints
+*.pt
+*.ckpt
+
+# Data downloads
+data/songeval/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

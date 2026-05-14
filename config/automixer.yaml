@@ -1,0 +1,157 @@
+# AUTO-MIXER-Tubeslave Configuration
+# Target setup: Allen & Heath dLive + Waves SoundGrid on macOS (M3 Max)
+
+mixer:
+  type: "dlive"
+  ip: "192.168.3.70"
+  port: 51328
+  protocol: "midi_tcp"
+  tls: false
+  midi_base_channel: 0
+  keepalive_interval: 5.0
+  command_rate_limit: 10.0
+  connection_timeout: 10.0
+
+audio:
+  sample_rate: 48000
+  block_size: 1024
+  channels: 48
+  source: "soundgrid"  # soundgrid, dante, sounddevice, test_sine, test_pink_noise, silence
+  device_name: "soundgrid"  # pattern to match (e.g. "Waves SoundGrid", "soundgrid")
+  buffer_seconds: 5.0
+
+websocket:
+  host: "0.0.0.0"
+  port: 8765
+  max_clients: 10
+
+agent:
+  enabled: true
+  mode: "auto"  # auto = apply without confirmation; suggest, manual
+  cycle_interval: 0.5
+  confidence_threshold: 0.6
+  max_actions_per_cycle: 5
+
+ai:
+  llm_backend: "ollama"  # ollama, perplexity
+  llm_model: "llama3"
+  ollama_url: "http://localhost:11434"
+  perplexity_api_key: ""
+  knowledge_dir: ""
+
+safety:
+  feedback_detection: true
+  max_gain_db: 12.0
+  true_peak_limit: -1.0
+  max_notch_filters: 8
+  max_notch_depth_db: -12.0
+
+logging:
+  level: "INFO"
+  json_output: false
+  log_file: ""
+
+metrics:
+  enabled: false
+  prometheus_port: 9090
+
+session:
+  auto_save: true
+  save_interval: 300
+  session_dir: "sessions"
+
+# Auto Soundcheck Engine settings
+soundcheck:
+  auto_apply: false
+  signal_threshold_db: -50.0
+  analysis_seconds: 3.0
+  analysis_timeout_seconds: 30.0
+  gain_correction_max_db: 12.0
+
+live_input_trim:
+  enabled: true
+  live_apply_enabled: false
+  analysis_only_mode: true
+  level_source: "wing_meter"
+  require_meter_for_live_apply: true
+  require_meter_for_analysis: true
+  wing_meter_enabled: true
+  native_meter_enabled: true
+  native_meter_tcp_port: 2222
+  native_meter_report_id: 1095588145
+  native_values_per_channel: 8
+  native_meter_renew_interval_sec: 2.0
+  meter_activity_fallback: true
+  usb_silence_dbfs: -90.0
+  meter_stale_timeout_sec: 0.75
+  meter_subscribe_interval_ms: 100
+  meter_query_timeout_sec: 0.08
+  meter_query_interval_sec: 0.75
+  meter_peak_to_rms_margin_db: 12.0
+  meter_subscribe_paths:
+    - "/$meters/subscribe"
+    - "/meters/subscribe"
+  meter_input_paths:
+    - "/$meters/ch/{ch}/in"
+    - "/meters/ch/{ch}/in"
+  update_interval_ms: 250
+  analysis_window_sec: 0.5
+  min_main_signal_confidence: 0.65
+  high_bleed_ratio: 0.45
+  max_step_db_per_tick: 0.25
+  max_boost_step_db: 0.15
+  deadband_db: 0.1
+  apply_cooldown_sec: 1.0
+  trim_min_db: -18.0
+  trim_max_db: 18.0
+  hot_peak_threshold_dbfs: -3.0
+  hot_peak_target_dbfs: -6.0
+  true_peak_ceiling_dbtp: -1.0
+  regular_cut_requires_ready: true
+  block_regular_trim_on_bleed: true
+  percussive_peak_mode: true
+  percussive_boost_margin_db: 1.0
+  percussive_min_crest_db: 10.0
+  limit_release_margin_db: 1.0
+
+autoeq:
+  enabled: false
+  mode: "offline"
+  safety_profile: "conservative"
+  apply_static_eq: true
+  apply_dynamic_eq: true
+  apply_group_eq: true
+  apply_master_eq: false
+  report_only: false
+  osc_dry_run: true
+  osc_apply: false
+  live_limits:
+    max_static_gain_db: 1.5
+    max_dynamic_cut_db: 3.0
+    max_dynamic_boost_db: 1.0
+    max_master_eq_db: 0.75
+    max_filters_per_channel: 3
+    max_dynamic_filters_per_channel: 2
+    min_confidence_to_apply: 0.6
+    half_strength_confidence_until: 0.8
+    smoothing_ms: 1000
+    hold_time_ms: 2000
+  offline_limits:
+    max_static_gain_db: 3.0
+    max_dynamic_cut_db: 5.0
+    max_dynamic_boost_db: 1.5
+    max_master_eq_db: 1.5
+    max_filters_per_channel: 5
+    max_dynamic_filters_per_channel: 3
+    min_confidence_to_apply: 0.55
+  priorities:
+    lead_vocal: 100
+    kick: 90
+    snare: 85
+    bass: 85
+    back_vocal: 65
+    guitar: 55
+    accordion: 55
+    playback: 50
+    overheads: 45
+    cymbals: 40

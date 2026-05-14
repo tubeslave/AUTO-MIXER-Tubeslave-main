@@ -1,0 +1,28 @@
+# A2: Frozen MuQ + Transformer block + Ordinal CE (DORA-MOS replica)
+# Go/no-go gate: must achieve SRCC_sys(MI) >= 0.85 on MusicEval 5-fold mean.
+
+defaults:
+  - base
+
+experiment:
+  name: "A2_frozen_ordinal"
+  tags: ["go-no-go", "frozen", "ordinal_ce", "phase1"]
+
+model:
+  tuning_mode: "frozen"
+  pooling: "attention"
+  head_layers: 3  # deeper head (Transformer-style)
+  head_hidden_dim: 512
+
+loss:
+  type: "ordinal_ce"
+  ordinal_bins: 5
+  ordinal_sigma: 0.5
+  uncertainty_weighting: false
+  bias_calibration: false
+
+training:
+  epochs: 30
+  batch_size: 16
+  lr: 5.0e-4
+  gradient_checkpointing: false

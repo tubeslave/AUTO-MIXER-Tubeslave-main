@@ -1,0 +1,29 @@
+# A1 with 500 training samples per fold
+# ~medium Spotify playlist worth of annotations
+
+defaults:
+  - base
+
+experiment:
+  name: "A1_n500"
+  tags: ["data_efficiency", "frozen", "mse", "subsample"]
+
+data:
+  train_subsample_n: 500
+
+model:
+  tuning_mode: "frozen"
+  pooling: "attention"
+  head_layers: 2
+  head_hidden_dim: 256
+
+loss:
+  type: "mse"
+  uncertainty_weighting: false
+  bias_calibration: false
+
+training:
+  epochs: 30
+  batch_size: 16
+  lr: 1.0e-3
+  gradient_checkpointing: false

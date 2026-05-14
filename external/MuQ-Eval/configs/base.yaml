@@ -1,0 +1,118 @@
+# Base configuration for neural music quality evaluator
+# All experiment configs inherit from this.
+
+seed: 42
+
+# --- Data ---
+data:
+  musiceval_id: "BAAI/MusicEval"
+  songeval_id: "ASLP-lab/SongEval"
+  sample_rate: 24000
+  clip_duration_sec: 10.0
+  clip_samples: 240000  # 24000 * 10
+  num_workers: 4
+  pin_memory: true
+
+  # MusicEval CV
+  cv_folds: 5
+  cv_stratify_by: "model"  # stratify by TTM model
+
+  # SongEval chunking
+  songeval_chunk_mode: "random"  # random|center|multi
+  songeval_num_chunks: 1  # per song during training
+
+  # Dimension mapping
+  musiceval_dims:
+    MI: "overall_quality"
+    TA: "textual_alignment"
+  songeval_dims:
+    MI: "Musicality"
+    TA: null  # no text alignment in SongEval
+    PQ: "Coherence"
+
+# --- Model ---
+model:
+  encoder: "muq"  # muq | mert_95m | mert_330m
+  encoder_id: "OpenMuQ/MuQ-large-msd-iter"
+  encoder_dim: 1024
+  freeze_encoder: true
+
+  # Pooling
+  pooling: "attention"  # attention | mean | cls
+
+  # Prediction heads
+  heads:
+    - name: "MI"
+      output_dim: 1  # regression
+    - name: "TA"
+      output_dim: 1
+
+  # Head architecture
+  head_hidden_dim: 256
+  head_dropout: 0.1
+  head_layers: 2  # number of MLP layers in head
+
+  # LoRA (only when tuning_mode=lora)
+  lora:
+    r: 16
+    alpha: 32
+    target_modules: ["q_proj", "k_proj", "v_proj", "out_proj"]
+    dropout: 0.1
+    bias: "none"
+
+  # Tuning mode: frozen | lora | full
+  tuning_mode: "frozen"
+
+# --- Loss ---
+loss:
+  type: "mse"  # mse | ordinal_ce | ordinal_ce_contrastive
+  # Ordinal CE params
+  ordinal_bins: 5
+  ordinal_sigma: 0.5
+  # Contrastive params
+  contrastive_weight: 0.5
+  contrastive_margin: 0.5
+  contrastive_warmstart_epoch: 6  # add contrastive loss after this epoch
+  # Uncertainty weighting (Kendall et al.)
+  uncertainty_weighting: false
+  # Bias calibration (MBNet-style)
+  bias_calibration: false
+
+# --- Training ---
+training:
+  epochs: 30
+  batch_size: 16
+  lr: 1.0e-4
+  weight_decay: 0.01
+  warmup_steps: 500
+  scheduler: "cosine"  # cosine | linear | constant
+  gradient_clip_norm: 1.0
+  mixed_precision: "bf16"  # bf16 | fp16 | no
+  gradient_checkpointing: false
+
+  # Early stopping
+  patience: 7
+  monitor: "val/MI_srcc"
+  monitor_mode: "max"
+
+  # Logging
+  log_every_n_steps: 10
+  eval_every_n_epochs: 1
+  save_top_k: 3
+
+# --- Evaluation ---
+evaluation:
+  bootstrap_n: 1000
+  bootstrap_ci: 0.95
+  steiger_alpha: 0.0083  # Bonferroni-corrected for 6 comparisons
+
+# --- Paths ---
+paths:
+  output_dir: "./outputs"
+  cache_dir: "./cache"
+  wandb_project: "music-quality-evaluator"
+
+# --- Experiment ---
+experiment:
+  name: "base"
+  tags: []

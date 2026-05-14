@@ -1,0 +1,26 @@
+# A1: Frozen MuQ + Attention Pooling + MLP, MSE loss (Baseline)
+# This is the simplest baseline: freeze encoder, train only the pooling + head.
+
+defaults:
+  - base
+
+experiment:
+  name: "A1_frozen_mlp"
+  tags: ["baseline", "frozen", "mse", "phase1"]
+
+model:
+  tuning_mode: "frozen"
+  pooling: "attention"
+  head_layers: 2
+  head_hidden_dim: 256
+
+loss:
+  type: "mse"
+  uncertainty_weighting: false
+  bias_calibration: false
+
+training:
+  epochs: 30
+  batch_size: 16
+  lr: 1.0e-3  # higher LR for head-only training
+  gradient_checkpointing: false

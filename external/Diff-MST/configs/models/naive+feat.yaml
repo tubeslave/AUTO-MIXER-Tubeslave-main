@@ -1,0 +1,73 @@
+model:
+  class_path: mst.system.System
+  init_args:
+    #geerate random mixes as specified in Method 1 of the paper ; True for Method 1, False for Method 2
+    generate_mix: True
+    #set the epoch values very high to disable any of the effects during training; fx_bus corresponds to reverb module. 
+    active_eq_epoch: 0
+    active_compressor_epoch: 0
+    active_fx_bus_epoch: 1000
+    active_master_bus_epoch: 0
+    use_track_loss : false
+    use_mix_loss : true
+    use_param_loss : false
+
+    #We generate random mixes using the naive random mix function
+
+    mix_fn: mst.mixing.naive_random_mix
+    mix_console:
+      class_path: mst.modules.AdvancedMixConsole
+      init_args:
+        sample_rate: 44100
+        input_min_gain_db: -48.0
+        input_max_gain_db: 48.0
+        output_min_gain_db: -48.0
+        output_max_gain_db: 48.0
+        eq_min_gain_db: -12.0
+        eq_max_gain_db: 12.0
+        min_pan: 0.0
+        max_pan: 1.0
+    model: 
+      class_path: mst.modules.MixStyleTransferModel 
+      init_args:
+        track_encoder: 
+          class_path: mst.modules.SpectrogramEncoder
+          init_args:
+            embed_dim: 512
+            n_fft: 2048
+            hop_length: 512
+            input_batchnorm: false
+        mix_encoder: 
+          class_path: mst.modules.SpectrogramEncoder
+          init_args:
+            embed_dim: 512
+            n_fft: 2048
+            hop_length: 512
+            input_batchnorm: false
+        controller:
+          class_path: mst.modules.TransformerController
+          init_args:
+            embed_dim: 512
+            num_track_control_params: 27
+            num_fx_bus_control_params: 25
+            num_master_bus_control_params: 26
+            num_layers: 12
+            nhead: 8
+       
+    loss: 
+      class_path: mst.loss.AudioFeatureLoss
+      init_args:
+        sample_rate: 44100
+        stem_separation: false
+        use_clap: False
+        weights: 
+          - 0.1 # rms
+          - 0.001 # crest factor
+          - 1.0  # stereo width
+          - 1.0 # stereo imbalance
+          - 0.1 # bark spectrum
+          - 1.0 # CLAP
+    
+
+
+

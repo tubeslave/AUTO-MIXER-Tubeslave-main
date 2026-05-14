@@ -1,0 +1,26 @@
+
+[project]
+name = "dasp-pytorch"
+version = "0.0.1"
+description = "Differentiable audio processors in PyTorch."
+authors = [
+    { name = "Christian Steinmetz" },
+    { email = "c.j.steinmetz@qmul.ac.uk" },
+]
+dependencies = ["torch", "numpy",  "scipy"]
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "Apache License 2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Scientific/Engineering",
+]
+
+[build-system]
+# Minimum requirements for the build system to execute.
+requires = ["setuptools", "wheel", "attrs"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+extra = ["matplotlib", "librosa"]

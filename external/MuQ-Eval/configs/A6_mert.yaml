@@ -1,0 +1,34 @@
+# A6: MERT-95M full fine-tune as encoder comparison
+# Phase 3 encoder ablation.
+
+defaults:
+  - base
+
+experiment:
+  name: "A6_mert95m"
+  tags: ["ablation", "encoder", "mert", "full_finetune", "phase3"]
+
+model:
+  encoder: "mert_95m"
+  encoder_id: "m-a-p/MERT-v1-95M"
+  encoder_dim: 768
+  tuning_mode: "full"
+  pooling: "attention"
+  head_layers: 3
+  head_hidden_dim: 512
+
+loss:
+  type: "ordinal_ce_contrastive"
+  ordinal_bins: 5
+  ordinal_sigma: 0.5
+  contrastive_weight: 0.5
+  contrastive_margin: 0.5
+  contrastive_warmstart_epoch: 6
+  uncertainty_weighting: false
+  bias_calibration: false
+
+training:
+  epochs: 30
+  batch_size: 8  # smaller batch for full fine-tuning
+  lr: 5.0e-5  # lower LR for full fine-tuning
+  gradient_checkpointing: true  # needed for full fine-tune on 16GB

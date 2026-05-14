@@ -1,0 +1,33 @@
+# A3a: MuQ + LoRA r=16 + Ordinal CE
+# Phase 2 component ablation: add LoRA to A2.
+
+defaults:
+  - base
+
+experiment:
+  name: "A3a_lora"
+  tags: ["ablation", "lora", "ordinal_ce", "phase2"]
+
+model:
+  tuning_mode: "lora"
+  pooling: "attention"
+  head_layers: 3
+  head_hidden_dim: 512
+  lora:
+    r: 16
+    alpha: 32
+    target_modules: ["q_proj", "k_proj", "v_proj", "out_proj"]
+    dropout: 0.1
+
+loss:
+  type: "ordinal_ce"
+  ordinal_bins: 5
+  ordinal_sigma: 0.5
+  uncertainty_weighting: false
+  bias_calibration: false
+
+training:
+  epochs: 30
+  batch_size: 16
+  lr: 1.0e-4  # lower LR for encoder tuning
+  gradient_checkpointing: false

@@ -1,0 +1,6275 @@
+{
+  "input_dir": "external/automix-toolkit/drums-test-rock/tracks",
+  "output": "external/automix-toolkit/drums-test-rock/mix/reference_matched_offline_mix.mp3",
+  "reference": "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/reference_style_set",
+  "reference_sources": [
+    "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/dry_mix_066_phrase_rock_complex_fast_sticks_DMC.wav",
+    "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/dry_mix_066_phrase_rock_complex_fast_sticks_MixWaveUNet.wav"
+  ],
+  "genre": "rock",
+  "sample_rate": 44100,
+  "codex_orchestrator": {
+    "enabled": false,
+    "dry_run": false,
+    "llm_enabled": false,
+    "mode": "direct",
+    "max_actions_per_cycle": 5,
+    "proposed_actions": [
+      {
+        "action_type": "reduce_gain",
+        "channel": 1,
+        "parameters": {
+          "channel": 1,
+          "amount_db": -3.0
+        },
+        "priority": 1,
+        "confidence": 1.0,
+        "reason": "True peak at 3.8dBTP exceeds -0.5dBTP limit",
+        "source": "rule_engine",
+        "timestamp": 1776853705.9008,
+        "risk": "medium",
+        "expected_effect": "",
+        "rollback_hint": ""
+      },
+      {
+        "action_type": "adjust_gain",
+        "channel": 1,
+        "parameters": {
+          "channel": 1,
+          "target_peak_db": -8.0,
+          "adjustment_db": -3.0
+        },
+        "priority": 2,
+        "confidence": 0.85,
+        "reason": "Peak level at 3.8dB (target: -8.0dB)",
+        "source": "rule_engine",
+        "timestamp": 1776853705.9008,
+        "risk": "medium",
+        "expected_effect": "",
+        "rollback_hint": ""
+      }
+    ],
+    "proposed_count": 2,
+    "applied_count": 2,
+    "pending_before_approve": 0
+  },
+  "duration_sec": 26.36,
+  "final_peak_dbfs": -3.43,
+  "final_lufs": -15.8,
+  "music_bed_lufs": -24.36,
+  "vocal_bed_balance": {
+    "enabled": false,
+    "notes": [
+      "Static vocal bed attenuation is disabled.",
+      "Vocal space must come from priority EQ and measured analyzer corrections."
+    ]
+  },
+  "bass_drum_boost": {
+    "enabled": false
+  },
+  "cross_adaptive_eq": {
+    "enabled": true,
+    "raw_adjustments": 90,
+    "applied_adjustments": 19,
+    "skipped_adjustments": 51,
+    "channel_priorities": {
+      "1": 2,
+      "2": 3,
+      "3": 5,
+      "4": 4,
+      "5": 4,
+      "6": 5,
+      "7": 5,
+      "8": 5
+    },
+    "notes": [
+      "Cross-adaptive EQ is priority-driven: lower numeric priority means the channel is protected first.",
+      "Lead vocals keep highest EQ priority, while competing accompaniment receives most anti-mask cuts."
+    ],
+    "applied": [
+      {
+        "channel": 2,
+        "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "snare",
+        "priority": 3,
+        "frequency_hz": 120.0,
+        "band": "bass",
+        "gain_db": -0.36,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 4,
+        "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 4,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 4,
+        "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 4,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 4,
+        "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 4,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 5,
+        "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 4,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 5,
+        "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 4,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 5,
+        "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "priority": 4,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "priority": 5,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "priority": 5,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -1.58,
+        "q": 4.0,
+        "source_count": 2
+      },
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "priority": 5,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -2.5,
+        "q": 4.0,
+        "source_count": 3
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 120.0,
+        "band": "bass",
+        "gain_db": -1.8,
+        "q": 4.0,
+        "source_count": 3
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 3000.0,
+        "band": "high_mid",
+        "gain_db": -0.48,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 40.0,
+        "band": "sub",
+        "gain_db": -1.42,
+        "q": 4.0,
+        "source_count": 3
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 1250.0,
+        "band": "mid",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "priority": 5,
+        "frequency_hz": 6000.0,
+        "band": "high",
+        "gain_db": -0.9,
+        "q": 4.0,
+        "source_count": 1
+      }
+    ]
+  },
+  "reference_mix_guidance": {
+    "enabled": true,
+    "reference_path": "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/reference_style_set",
+    "source_type": "audio_directory",
+    "reference_sources": [
+      "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/dry_mix_066_phrase_rock_complex_fast_sticks_DMC.wav",
+      "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/dry_mix_066_phrase_rock_complex_fast_sticks_MixWaveUNet.wav"
+    ],
+    "applied_channel_count": 8,
+    "style_profile": {
+      "name": "reference_style_set",
+      "loudness_lufs": -20.55,
+      "dynamic_range_db": 19.83,
+      "stereo_width": 0.14,
+      "crest_factor_db": 19.54,
+      "spectral_balance": {
+        "bass": -1.96,
+        "brilliance": -21.37,
+        "high_mid": -13.56,
+        "low_mid": -9.57,
+        "mid": -12.61,
+        "presence": -14.79,
+        "sub_bass": -10.28
+      },
+      "instrument_settings_mode": "relative"
+    },
+    "targets": {
+      "tilt": {
+        "weight_60_120_vs_plateau_db": -6.78,
+        "sub_35_60_vs_plateau_db": -13.07,
+        "high_4500_12000_vs_plateau_db": 15.2,
+        "plateau_spread_db": 18.1
+      },
+      "hierarchy": {
+        "lead_over_bgv_rms_db": 4.698,
+        "kick_over_bass_55_95_db": 1.232
+      },
+      "kick": {
+        "click_share_in_master": 0.0266,
+        "click_share_in_drums": 0.0841,
+        "dynamic_range_max_db": 17.155,
+        "click_minus_punch_db": -18.254,
+        "box_minus_click_db": 0.045
+      },
+      "style_summary": {
+        "dynamic_range_db": 19.829,
+        "stereo_width": 0.14,
+        "crest_factor_db": 19.545
+      }
+    },
+    "sections": [
+      {
+        "start_sec": 0.0,
+        "end_sec": 11.889,
+        "lufs": -17.6,
+        "crest_factor_db": 19.52,
+        "tilt": {
+          "compensation_db_per_octave": 4.5,
+          "window_sec": 3.0,
+          "segments": 3,
+          "smoothing": "1/3 octave",
+          "regions_db": {
+            "infra_20_35": 38.35,
+            "sub_35_60": 57.14,
+            "weight_60_120": 63.43,
+            "plateau_90_4500": 70.21,
+            "high_4500_12000": 85.41,
+            "air_12000_20000": 82.44
+          },
+          "weight_60_120_vs_plateau_db": -6.78,
+          "sub_35_60_vs_plateau_db": -13.07,
+          "high_4500_12000_vs_plateau_db": 15.2,
+          "plateau_spread_db": 18.1,
+          "curve": [
+            {
+              "center_hz": 21.02,
+              "raw_db": 42.33,
+              "compensated_db": 32.21
+            },
+            {
+              "center_hz": 24.8,
+              "raw_db": 47.33,
+              "compensated_db": 38.28
+            },
+            {
+              "center_hz": 31.25,
+              "raw_db": 52.11,
+              "compensated_db": 44.56
+            },
+            {
+              "center_hz": 39.37,
+              "raw_db": 60.59,
+              "compensated_db": 54.54
+            },
+            {
+              "center_hz": 49.61,
+              "raw_db": 64.3,
+              "compensated_db": 59.75
+            },
+            {
+              "center_hz": 62.5,
+              "raw_db": 64.16,
+              "compensated_db": 61.11
+            },
+            {
+              "center_hz": 78.75,
+              "raw_db": 64.28,
+              "compensated_db": 62.73
+            },
+            {
+              "center_hz": 99.21,
+              "raw_db": 66.49,
+              "compensated_db": 66.44
+            },
+            {
+              "center_hz": 125.0,
+              "raw_db": 63.8,
+              "compensated_db": 65.25
+            },
+            {
+              "center_hz": 157.49,
+              "raw_db": 61.79,
+              "compensated_db": 64.73
+            },
+            {
+              "center_hz": 198.43,
+              "raw_db": 69.38,
+              "compensated_db": 73.83
+            },
+            {
+              "center_hz": 250.0,
+              "raw_db": 62.02,
+              "compensated_db": 67.97
+            },
+            {
+              "center_hz": 314.98,
+              "raw_db": 62.77,
+              "compensated_db": 70.22
+            },
+            {
+              "center_hz": 396.85,
+              "raw_db": 57.92,
+              "compensated_db": 66.87
+            },
+            {
+              "center_hz": 500.0,
+              "raw_db": 59.87,
+              "compensated_db": 70.31
+            },
+            {
+              "center_hz": 629.96,
+              "raw_db": 51.11,
+              "compensated_db": 63.06
+            },
+            {
+              "center_hz": 793.7,
+              "raw_db": 55.57,
+              "compensated_db": 69.02
+            },
+            {
+              "center_hz": 1000.0,
+              "raw_db": 54.33,
+              "compensated_db": 69.28
+            },
+            {
+              "center_hz": 1259.92,
+              "raw_db": 53.78,
+              "compensated_db": 70.23
+            },
+            {
+              "center_hz": 1587.4,
+              "raw_db": 54.47,
+              "compensated_db": 72.42
+            },
+            {
+              "center_hz": 2000.0,
+              "raw_db": 52.7,
+              "compensated_db": 72.15
+            },
+            {
+              "center_hz": 2519.84,
+              "raw_db": 53.07,
+              "compensated_db": 74.01
+            },
+            {
+              "center_hz": 3174.8,
+              "raw_db": 54.18,
+              "compensated_db": 76.63
+            },
+            {
+              "center_hz": 4000.0,
+              "raw_db": 57.2,
+              "compensated_db": 81.15
+            },
+            {
+              "center_hz": 5039.68,
+              "raw_db": 58.31,
+              "compensated_db": 83.76
+            },
+            {
+              "center_hz": 6349.6,
+              "raw_db": 58.06,
+              "compensated_db": 85.01
+            },
+            {
+              "center_hz": 8000.0,
+              "raw_db": 57.74,
+              "compensated_db": 86.18
+            },
+            {
+              "center_hz": 10079.37,
+              "raw_db": 56.75,
+              "compensated_db": 86.7
+            },
+            {
+              "center_hz": 12699.21,
+              "raw_db": 53.53,
+              "compensated_db": 84.98
+            },
+            {
+              "center_hz": 16000.0,
+              "raw_db": 50.68,
+              "compensated_db": 83.63
+            },
+            {
+              "center_hz": 18952.25,
+              "raw_db": 44.67,
+              "compensated_db": 78.71
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "channel": 1,
+        "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "kick",
+        "reference_type": "kick",
+        "fader": {
+          "before_db": -6.0,
+          "delta_db": 1.49,
+          "after_db": -4.51
+        },
+        "eq": [
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 60.0,
+              "gain_db": 3.0,
+              "q": 0.9
+            },
+            "after": {
+              "freq_hz": 60.0,
+              "gain_db": 3.66,
+              "q": 0.82
+            },
+            "requested_gain_db": 3.0
+          },
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 100.0,
+              "gain_db": 0.53,
+              "q": 0.75
+            },
+            "requested_gain_db": 2.4
+          },
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 1000.0,
+              "gain_db": -0.26,
+              "q": 1.5
+            },
+            "requested_gain_db": -1.2
+          }
+        ],
+        "compressor": {
+          "ratio_before": 4.0,
+          "ratio_after": 4.2,
+          "threshold_before_db": -18.0,
+          "threshold_after_db": -16.77
+        },
+        "pan": null,
+        "expander": {
+          "enabled_before": false,
+          "threshold_before_db": null,
+          "threshold_after_db": -48.5,
+          "range_before_db": 0.0,
+          "range_after_db": 8.0
+        },
+        "fx_send": {
+          "before_db": null,
+          "target_db": -96.0,
+          "after_db": -96.0
+        }
+      },
+      {
+        "channel": 2,
+        "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "snare",
+        "reference_type": "snare",
+        "fader": null,
+        "eq": [
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 60.0,
+              "gain_db": 0.66,
+              "q": 0.75
+            },
+            "requested_gain_db": 3.0
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 750.0,
+              "gain_db": -2.5,
+              "q": 1.7
+            },
+            "after": {
+              "freq_hz": 750.0,
+              "gain_db": -2.76,
+              "q": 1.6
+            },
+            "requested_gain_db": -1.2
+          }
+        ],
+        "compressor": {
+          "ratio_before": 3.0,
+          "ratio_after": 3.27,
+          "threshold_before_db": -19.0,
+          "threshold_after_db": -17.55
+        },
+        "pan": null,
+        "expander": {
+          "enabled_before": false,
+          "threshold_before_db": null,
+          "threshold_after_db": -50.5,
+          "range_before_db": 0.0,
+          "range_after_db": 8.0
+        },
+        "fx_send": {
+          "before_db": null,
+          "target_db": -21.44,
+          "after_db": -21.44
+        }
+      },
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "reference_type": "hihat",
+        "fader": {
+          "before_db": -3.0,
+          "delta_db": -0.41,
+          "after_db": -3.41
+        },
+        "eq": [
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 60.0,
+              "gain_db": 0.54,
+              "q": 0.75
+            },
+            "requested_gain_db": 3.0
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 1250.0,
+              "gain_db": -0.9,
+              "q": 4.0
+            },
+            "after": {
+              "freq_hz": 1250.0,
+              "gain_db": -1.12,
+              "q": 2.5
+            },
+            "requested_gain_db": -1.2
+          }
+        ],
+        "compressor": null,
+        "pan": {
+          "before": 0.0,
+          "target": 0.316,
+          "after": 0.133
+        },
+        "expander": null,
+        "fx_send": {
+          "before_db": null,
+          "target_db": -23.44,
+          "after_db": -23.44
+        }
+      },
+      {
+        "channel": 4,
+        "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "reference_type": "other",
+        "fader": {
+          "before_db": 0.0,
+          "delta_db": -0.87,
+          "after_db": -0.87
+        },
+        "eq": [
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 60.0,
+              "gain_db": 0.66,
+              "q": 0.75
+            },
+            "requested_gain_db": 3.0
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 1250.0,
+              "gain_db": -0.9,
+              "q": 4.0
+            },
+            "after": {
+              "freq_hz": 1250.0,
+              "gain_db": -1.16,
+              "q": 2.5
+            },
+            "requested_gain_db": -1.2
+          }
+        ],
+        "compressor": {
+          "ratio_before": 2.0,
+          "ratio_after": 2.01,
+          "threshold_before_db": -20.0,
+          "threshold_after_db": -19.76
+        },
+        "pan": {
+          "before": 0.0,
+          "target": 0.157,
+          "after": 0.066
+        },
+        "expander": null,
+        "fx_send": {
+          "before_db": null,
+          "target_db": -21.58,
+          "after_db": -21.58
+        }
+      },
+      {
+        "channel": 5,
+        "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "reference_type": "other",
+        "fader": {
+          "before_db": 0.0,
+          "delta_db": 0.0,
+          "after_db": 0.0
+        },
+        "eq": [
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 60.0,
+              "gain_db": 0.66,
+              "q": 0.75
+            },
+            "requested_gain_db": 3.0
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 1250.0,
+              "gain_db": -0.9,
+              "q": 4.0
+            },
+            "after": {
+              "freq_hz": 1250.0,
+              "gain_db": -1.16,
+              "q": 2.5
+            },
+            "requested_gain_db": -1.2
+          }
+        ],
+        "compressor": {
+          "ratio_before": 2.0,
+          "ratio_after": 2.01,
+          "threshold_before_db": -20.0,
+          "threshold_after_db": -19.76
+        },
+        "pan": {
+          "before": 0.0,
+          "target": 0.157,
+          "after": 0.066
+        },
+        "expander": null,
+        "fx_send": {
+          "before_db": null,
+          "target_db": -21.58,
+          "after_db": -21.58
+        }
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "reference_type": "toms",
+        "fader": {
+          "before_db": 0.0,
+          "delta_db": -0.42,
+          "after_db": -0.42
+        },
+        "eq": [
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 60.0,
+              "gain_db": 0.66,
+              "q": 0.75
+            },
+            "requested_gain_db": 3.0
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 1250.0,
+              "gain_db": -0.9,
+              "q": 4.0
+            },
+            "after": {
+              "freq_hz": 1250.0,
+              "gain_db": -1.16,
+              "q": 2.5
+            },
+            "requested_gain_db": -1.2
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 120.0,
+              "gain_db": 2.0,
+              "q": 1.0
+            },
+            "after": {
+              "freq_hz": 120.0,
+              "gain_db": 2.26,
+              "q": 0.88
+            },
+            "requested_gain_db": 1.2
+          }
+        ],
+        "compressor": {
+          "ratio_before": 3.0,
+          "ratio_after": 2.89,
+          "threshold_before_db": -22.0,
+          "threshold_after_db": -21.36
+        },
+        "pan": null,
+        "expander": {
+          "enabled_before": true,
+          "threshold_before_db": -18.5,
+          "threshold_after_db": -54.5,
+          "range_before_db": 12.0,
+          "range_after_db": 12.0
+        },
+        "fx_send": {
+          "before_db": null,
+          "target_db": -23.58,
+          "after_db": -23.58
+        }
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "reference_type": "toms",
+        "fader": {
+          "before_db": 0.0,
+          "delta_db": -0.96,
+          "after_db": -0.96
+        },
+        "eq": [
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 60.0,
+              "gain_db": 0.66,
+              "q": 0.75
+            },
+            "requested_gain_db": 3.0
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 1250.0,
+              "gain_db": -0.9,
+              "q": 4.0
+            },
+            "after": {
+              "freq_hz": 1250.0,
+              "gain_db": -1.16,
+              "q": 2.5
+            },
+            "requested_gain_db": -1.2
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 120.0,
+              "gain_db": 2.0,
+              "q": 1.0
+            },
+            "after": {
+              "freq_hz": 120.0,
+              "gain_db": 2.26,
+              "q": 0.88
+            },
+            "requested_gain_db": 1.2
+          }
+        ],
+        "compressor": {
+          "ratio_before": 3.0,
+          "ratio_after": 2.89,
+          "threshold_before_db": -22.0,
+          "threshold_after_db": -21.36
+        },
+        "pan": null,
+        "expander": {
+          "enabled_before": true,
+          "threshold_before_db": -16.02,
+          "threshold_after_db": -54.5,
+          "range_before_db": 12.0,
+          "range_after_db": 12.0
+        },
+        "fx_send": {
+          "before_db": null,
+          "target_db": -23.58,
+          "after_db": -23.58
+        }
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "reference_type": "toms",
+        "fader": {
+          "before_db": 0.0,
+          "delta_db": -0.63,
+          "after_db": -0.63
+        },
+        "eq": [
+          {
+            "mode": "append",
+            "after": {
+              "freq_hz": 60.0,
+              "gain_db": 0.66,
+              "q": 0.75
+            },
+            "requested_gain_db": 3.0
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 1250.0,
+              "gain_db": -0.9,
+              "q": 4.0
+            },
+            "after": {
+              "freq_hz": 1250.0,
+              "gain_db": -1.16,
+              "q": 2.5
+            },
+            "requested_gain_db": -1.2
+          },
+          {
+            "mode": "merge",
+            "before": {
+              "freq_hz": 120.0,
+              "gain_db": 2.0,
+              "q": 1.0
+            },
+            "after": {
+              "freq_hz": 120.0,
+              "gain_db": 2.26,
+              "q": 0.88
+            },
+            "requested_gain_db": 1.2
+          }
+        ],
+        "compressor": {
+          "ratio_before": 3.0,
+          "ratio_after": 2.89,
+          "threshold_before_db": -22.0,
+          "threshold_after_db": -21.36
+        },
+        "pan": null,
+        "expander": {
+          "enabled_before": true,
+          "threshold_before_db": -16.94,
+          "threshold_after_db": -54.5,
+          "range_before_db": 12.0,
+          "range_after_db": 12.0
+        },
+        "fx_send": {
+          "before_db": null,
+          "target_db": -23.58,
+          "after_db": -23.58
+        }
+      }
+    ],
+    "skipped_channels": []
+  },
+  "genre_mix_profile": {
+    "enabled": true,
+    "genre": "rock",
+    "notes": [
+      "Rock mode tightens lead vocal glue with stronger compression and steadier between-phrase behavior.",
+      "Snare layers stay treated as one center snare voice when both top and bottom mics are present."
+    ],
+    "snare_layers": [
+      "02_snare_066_phrase_rock_complex_fast_sticks.wav"
+    ],
+    "actions": [
+      {
+        "channel": 1,
+        "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "kick",
+        "changes": [
+          {
+            "type": "rock_kick_anchor",
+            "before": {
+              "threshold_db": -16.77,
+              "ratio": 4.2
+            },
+            "after": {
+              "threshold_db": -20.0,
+              "ratio": 4.2
+            }
+          }
+        ]
+      },
+      {
+        "channel": 2,
+        "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "snare",
+        "changes": [
+          {
+            "type": "rock_snare_center",
+            "before": {
+              "pan": 0.0,
+              "threshold_db": -17.55,
+              "ratio": 3.27
+            },
+            "after": {
+              "pan": 0.0,
+              "threshold_db": -23.0,
+              "ratio": 4.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "kick_bass_hierarchy": {
+    "enabled": false,
+    "reason": "kick_or_bass_missing"
+  },
+  "stem_mix_verification": {
+    "enabled": true,
+    "genre": "rock",
+    "reference_targets": {
+      "tilt": {
+        "weight_60_120_vs_plateau_db": -6.78,
+        "sub_35_60_vs_plateau_db": -13.07,
+        "high_4500_12000_vs_plateau_db": 15.2,
+        "plateau_spread_db": 18.1
+      },
+      "hierarchy": {
+        "lead_over_bgv_rms_db": 4.698,
+        "kick_over_bass_55_95_db": 1.232
+      },
+      "kick": {
+        "click_share_in_master": 0.0266,
+        "click_share_in_drums": 0.0841,
+        "dynamic_range_max_db": 17.155,
+        "click_minus_punch_db": -18.254,
+        "box_minus_click_db": 0.045
+      },
+      "style_summary": {
+        "dynamic_range_db": 19.829,
+        "stereo_width": 0.14,
+        "crest_factor_db": 19.545
+      }
+    },
+    "reference_distance": {
+      "before": {
+        "enabled": true,
+        "overall_distance": 8.2093,
+        "components": {
+          "weight_60_120_vs_plateau_db": 0.57,
+          "sub_35_60_vs_plateau_db": 2.87,
+          "high_4500_12000_vs_plateau_db": 2.08,
+          "plateau_spread_db": 2.41,
+          "kick_dynamic_range_db": 3.145,
+          "kick_click_share_in_master": 1.35,
+          "kick_click_share_in_drums": 45.04
+        },
+        "current": {
+          "weight_60_120_vs_plateau_db": -6.21,
+          "sub_35_60_vs_plateau_db": -15.94,
+          "high_4500_12000_vs_plateau_db": 13.12,
+          "plateau_spread_db": 15.69,
+          "kick_dynamic_range_db": 20.3,
+          "kick_click_share_in_master": 0.0401,
+          "kick_click_share_in_drums": 0.5345
+        },
+        "target": {
+          "weight_60_120_vs_plateau_db": -6.78,
+          "sub_35_60_vs_plateau_db": -13.07,
+          "high_4500_12000_vs_plateau_db": 15.2,
+          "plateau_spread_db": 18.1,
+          "kick_dynamic_range_db": 17.155,
+          "kick_click_share_in_master": 0.0266,
+          "kick_click_share_in_drums": 0.0841
+        }
+      },
+      "after": {
+        "enabled": true,
+        "overall_distance": 10.6879,
+        "components": {
+          "weight_60_120_vs_plateau_db": 3.57,
+          "sub_35_60_vs_plateau_db": 0.55,
+          "high_4500_12000_vs_plateau_db": 2.48,
+          "plateau_spread_db": 1.98,
+          "kick_dynamic_range_db": 3.375,
+          "kick_click_share_in_master": 8.49,
+          "kick_click_share_in_drums": 54.37
+        },
+        "current": {
+          "weight_60_120_vs_plateau_db": -3.21,
+          "sub_35_60_vs_plateau_db": -13.62,
+          "high_4500_12000_vs_plateau_db": 12.72,
+          "plateau_spread_db": 16.12,
+          "kick_dynamic_range_db": 20.53,
+          "kick_click_share_in_master": 0.1115,
+          "kick_click_share_in_drums": 0.6278
+        },
+        "target": {
+          "weight_60_120_vs_plateau_db": -6.78,
+          "sub_35_60_vs_plateau_db": -13.07,
+          "high_4500_12000_vs_plateau_db": 15.2,
+          "plateau_spread_db": 18.1,
+          "kick_dynamic_range_db": 17.155,
+          "kick_click_share_in_master": 0.0266,
+          "kick_click_share_in_drums": 0.0841
+        }
+      }
+    },
+    "applied": true,
+    "notes": [
+      "Stem mix verification assembles rendered channels into stems before the final print.",
+      "The pass checks stem AChH, dynamics, and band hierarchy, then reseats the kick only if its click/dynamics are weak inside the drum or master stems.",
+      "When a reference is present, the same verification also measures distance to the reference hierarchy and tilt targets."
+    ],
+    "before": {
+      "stems": [
+        {
+          "stem": "CYMBALS",
+          "channel_count": 1,
+          "channels": [
+            3
+          ],
+          "files": [
+            "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -39.36,
+          "dynamic_range_db": 24.66,
+          "crest_factor_db": 14.3,
+          "band_energy": {
+            "sub": -89.36,
+            "bass": -31.66,
+            "low_mid": -29.26,
+            "mid": -21.52,
+            "presence": -12.67
+          },
+          "mix_indexes": {
+            "sub_index": -52.14,
+            "bass_index": -35.59,
+            "body_index": -8.01,
+            "mud_index": -0.65,
+            "presence_index": 15.25,
+            "harshness_index": 19.94,
+            "sibilance_index": 31.64,
+            "air_index": 32.54
+          }
+        },
+        {
+          "stem": "DRUMS",
+          "channel_count": 6,
+          "channels": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            8
+          ],
+          "files": [
+            "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+            "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+            "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "08_tom_3_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -21.08,
+          "dynamic_range_db": 22.3,
+          "crest_factor_db": 10.34,
+          "band_energy": {
+            "sub": -29.36,
+            "bass": -12.98,
+            "low_mid": -22.07,
+            "mid": -18.51,
+            "presence": -13.78
+          },
+          "mix_indexes": {
+            "sub_index": -16.1,
+            "bass_index": 5.55,
+            "body_index": 1.23,
+            "mud_index": -7.29,
+            "presence_index": 1.79,
+            "harshness_index": 5.6,
+            "sibilance_index": 13.46,
+            "air_index": 14.15
+          }
+        },
+        {
+          "stem": "KICK",
+          "channel_count": 1,
+          "channels": [
+            1
+          ],
+          "files": [
+            "01_kick_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -22.63,
+          "dynamic_range_db": 22.45,
+          "crest_factor_db": 14.09,
+          "band_energy": {
+            "sub": -18.81,
+            "bass": -5.27,
+            "low_mid": -32.48,
+            "mid": -20.15,
+            "presence": -22.74
+          },
+          "mix_indexes": {
+            "sub_index": -3.47,
+            "bass_index": 19.07,
+            "body_index": 6.78,
+            "mud_index": -10.91,
+            "presence_index": 6.55,
+            "harshness_index": 8.85,
+            "sibilance_index": 0.45,
+            "air_index": -5.89
+          }
+        },
+        {
+          "stem": "MASTER",
+          "channel_count": 8,
+          "channels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "files": [
+            "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+            "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+            "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+            "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+            "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "08_tom_3_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -20.45,
+          "dynamic_range_db": 21.54,
+          "crest_factor_db": 9.28,
+          "band_energy": {
+            "sub": -33.6,
+            "bass": -16.57,
+            "low_mid": -24.35,
+            "mid": -16.98,
+            "presence": -12.74
+          },
+          "mix_indexes": {
+            "sub_index": -19.54,
+            "bass_index": -0.98,
+            "body_index": 0.08,
+            "mud_index": -4.97,
+            "presence_index": 5.39,
+            "harshness_index": 6.3,
+            "sibilance_index": 11.09,
+            "air_index": 11.72
+          }
+        },
+        {
+          "stem": "SNARE",
+          "channel_count": 1,
+          "channels": [
+            2
+          ],
+          "files": [
+            "02_snare_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -28.88,
+          "dynamic_range_db": 27.97,
+          "crest_factor_db": 16.62,
+          "band_energy": {
+            "sub": -62.09,
+            "bass": -19.71,
+            "low_mid": -15.76,
+            "mid": -14.39,
+            "presence": -12.23
+          },
+          "mix_indexes": {
+            "sub_index": -53.82,
+            "bass_index": -34.75,
+            "body_index": 4.84,
+            "mud_index": 7.54,
+            "presence_index": 14.67,
+            "harshness_index": 19.41,
+            "sibilance_index": 17.67,
+            "air_index": 9.09
+          }
+        },
+        {
+          "stem": "TOMS",
+          "channel_count": 3,
+          "channels": [
+            6,
+            7,
+            8
+          ],
+          "files": [
+            "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "08_tom_3_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -32.58,
+          "dynamic_range_db": 22.03,
+          "crest_factor_db": 5.3,
+          "band_energy": {
+            "sub": -44.93,
+            "bass": -12.35,
+            "low_mid": -26.22,
+            "mid": -15.85,
+            "presence": -11.97
+          },
+          "mix_indexes": {
+            "sub_index": -41.18,
+            "bass_index": 4.99,
+            "body_index": 11.35,
+            "mud_index": 0.02,
+            "presence_index": 6.6,
+            "harshness_index": 7.68,
+            "sibilance_index": 4.6,
+            "air_index": -1.65
+          }
+        },
+        {
+          "stem": "UNKNOWN",
+          "channel_count": 2,
+          "channels": [
+            4,
+            5
+          ],
+          "files": [
+            "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+            "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -23.91,
+          "dynamic_range_db": 20.93,
+          "crest_factor_db": 12.34,
+          "band_energy": {
+            "sub": -54.21,
+            "bass": -18.57,
+            "low_mid": -24.95,
+            "mid": -16.2,
+            "presence": -12.27
+          },
+          "mix_indexes": {
+            "sub_index": -44.62,
+            "bass_index": -24.05,
+            "body_index": 4.46,
+            "mud_index": 2.7,
+            "presence_index": 13.52,
+            "harshness_index": 13.02,
+            "sibilance_index": 10.7,
+            "air_index": 10.79
+          }
+        }
+      ],
+      "band_hierarchy": [
+        {
+          "band": "AIR",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4747,
+          "runner_up_stem": "CYMBALS",
+          "runner_up_share": 0.4711
+        },
+        {
+          "band": "BASS",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4991,
+          "runner_up_stem": "KICK",
+          "runner_up_share": 0.2728
+        },
+        {
+          "band": "BODY",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4022,
+          "runner_up_stem": "TOMS",
+          "runner_up_share": 0.3234
+        },
+        {
+          "band": "HARSHNESS",
+          "dominant_stem": "UNKNOWN",
+          "dominant_share": 0.389,
+          "runner_up_stem": "DRUMS",
+          "runner_up_share": 0.3055
+        },
+        {
+          "band": "LOW_MID",
+          "dominant_stem": "UNKNOWN",
+          "dominant_share": 0.7215,
+          "runner_up_stem": "DRUMS",
+          "runner_up_share": 0.1393
+        },
+        {
+          "band": "MUD",
+          "dominant_stem": "UNKNOWN",
+          "dominant_share": 0.535,
+          "runner_up_stem": "DRUMS",
+          "runner_up_share": 0.2325
+        },
+        {
+          "band": "PRESENCE",
+          "dominant_stem": "UNKNOWN",
+          "dominant_share": 0.6318,
+          "runner_up_stem": "DRUMS",
+          "runner_up_share": 0.1841
+        },
+        {
+          "band": "SIBILANCE",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4712,
+          "runner_up_stem": "CYMBALS",
+          "runner_up_share": 0.4452
+        },
+        {
+          "band": "SUB",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4996,
+          "runner_up_stem": "KICK",
+          "runner_up_share": 0.4987
+        }
+      ],
+      "slope_conformity": {
+        "reference_tilt_db_per_octave": 4.5,
+        "master_mix_indexes": {
+          "sub_index": -19.54,
+          "bass_index": -0.98,
+          "body_index": 0.08,
+          "mud_index": -4.97,
+          "presence_index": 5.39,
+          "harshness_index": 6.3,
+          "sibilance_index": 11.09,
+          "air_index": 11.72
+        },
+        "sub_deficit_db": 19.54,
+        "bass_deficit_db": 0.98,
+        "body_deficit_db": 0.0
+      },
+      "tilt_conformity": {
+        "KICK": {
+          "compensation_db_per_octave": 4.5,
+          "window_sec": 3.0,
+          "segments": 6,
+          "smoothing": "1/3 octave",
+          "regions_db": {
+            "infra_20_35": 27.0,
+            "sub_35_60": 55.18,
+            "weight_60_120": 64.61,
+            "plateau_90_4500": 57.65,
+            "high_4500_12000": 60.68,
+            "air_12000_20000": 48.45
+          },
+          "weight_60_120_vs_plateau_db": 6.96,
+          "sub_35_60_vs_plateau_db": -2.47,
+          "high_4500_12000_vs_plateau_db": 3.03,
+          "plateau_spread_db": 22.95,
+          "curve": [
+            {
+              "center_hz": 21.02,
+              "raw_db": 30.57,
+              "compensated_db": 20.45
+            },
+            {
+              "center_hz": 24.8,
+              "raw_db": 35.31,
+              "compensated_db": 26.26
+            },
+            {
+              "center_hz": 31.25,
+              "raw_db": 41.84,
+              "compensated_db": 34.28
+            },
+            {
+              "center_hz": 39.37,
+              "raw_db": 58.72,
+              "compensated_db": 52.66
+            },
+            {
+              "center_hz": 49.61,
+              "raw_db": 62.25,
+              "compensated_db": 57.69
+            },
+            {
+              "center_hz": 62.5,
+              "raw_db": 65.01,
+              "compensated_db": 61.96
+            },
+            {
+              "center_hz": 78.75,
+              "raw_db": 66.38,
+              "compensated_db": 64.83
+            },
+            {
+              "center_hz": 99.21,
+              "raw_db": 67.1,
+              "compensated_db": 67.05
+            },
+            {
+              "center_hz": 125.0,
+              "raw_db": 64.1,
+              "compensated_db": 65.55
+            },
+            {
+              "center_hz": 157.49,
+              "raw_db": 63.01,
+              "compensated_db": 65.96
+            },
+            {
+              "center_hz": 198.43,
+              "raw_db": 56.13,
+              "compensated_db": 60.57
+            },
+            {
+              "center_hz": 250.0,
+              "raw_db": 47.45,
+              "compensated_db": 53.4
+            },
+            {
+              "center_hz": 314.98,
+              "raw_db": 37.28,
+              "compensated_db": 44.73
+            },
+            {
+              "center_hz": 396.85,
+              "raw_db": 36.58,
+              "compensated_db": 45.53
+            },
+            {
+              "center_hz": 500.0,
+              "raw_db": 35.09,
+              "compensated_db": 45.54
+            },
+            {
+              "center_hz": 629.96,
+              "raw_db": 38.12,
+              "compensated_db": 50.07
+            },
+            {
+              "center_hz": 793.7,
+              "raw_db": 38.91,
+              "compensated_db": 52.36
+            },
+            {
+              "center_hz": 1000.0,
+              "raw_db": 38.25,
+              "compensated_db": 53.2
+            },
+            {
+              "center_hz": 1259.92,
+              "raw_db": 41.88,
+              "compensated_db": 58.33
+            },
+            {
+              "center_hz": 1587.4,
+              "raw_db": 41.23,
+              "compensated_db": 59.18
+            },
+            {
+              "center_hz": 2000.0,
+              "raw_db": 40.02,
+              "compensated_db": 59.47
+            },
+            {
+              "center_hz": 2519.84,
+              "raw_db": 43.62,
+              "compensated_db": 64.56
+            },
+            {
+              "center_hz": 3174.8,
+              "raw_db": 44.35,
+              "compensated_db": 66.8
+            },
+            {
+              "center_hz": 4000.0,
+              "raw_db": 43.73,
+              "compensated_db": 67.68
+            },
+            {
+              "center_hz": 5039.68,
+              "raw_db": 38.86,
+              "compensated_db": 64.31
+            },
+            {
+              "center_hz": 6349.6,
+              "raw_db": 36.64,
+              "compensated_db": 63.59
+            },
+            {
+              "center_hz": 8000.0,
+              "raw_db": 30.17,
+              "compensated_db": 58.62
+            },
+            {
+              "center_hz": 10079.37,
+              "raw_db": 26.26,
+              "compensated_db": 56.21
+            },
+            {
+              "center_hz": 12699.21,
+              "raw_db": 23.98,
+              "compensated_db": 55.43
+            },
+            {
+              "center_hz": 16000.0,
+              "raw_db": 14.01,
+              "compensated_db": 46.95
+            },
+            {
+              "center_hz": 18952.25,
+              "raw_db": 8.92,
+              "compensated_db": 42.97
+            }
+          ]
+        },
+        "DRUMS": {
+          "compensation_db_per_octave": 4.5,
+          "window_sec": 3.0,
+          "segments": 6,
+          "smoothing": "1/3 octave",
+          "regions_db": {
+            "infra_20_35": 26.0,
+            "sub_35_60": 54.77,
+            "weight_60_120": 65.0,
+            "plateau_90_4500": 67.08,
+            "high_4500_12000": 79.23,
+            "air_12000_20000": 74.43
+          },
+          "weight_60_120_vs_plateau_db": -2.08,
+          "sub_35_60_vs_plateau_db": -12.31,
+          "high_4500_12000_vs_plateau_db": 12.15,
+          "plateau_spread_db": 16.19,
+          "curve": [
+            {
+              "center_hz": 21.02,
+              "raw_db": 30.15,
+              "compensated_db": 20.02
+            },
+            {
+              "center_hz": 24.8,
+              "raw_db": 33.95,
+              "compensated_db": 24.9
+            },
+            {
+              "center_hz": 31.25,
+              "raw_db": 40.64,
+              "compensated_db": 33.09
+            },
+            {
+              "center_hz": 39.37,
+              "raw_db": 58.5,
+              "compensated_db": 52.45
+            },
+            {
+              "center_hz": 49.61,
+              "raw_db": 61.64,
+              "compensated_db": 57.09
+            },
+            {
+              "center_hz": 62.5,
+              "raw_db": 65.5,
+              "compensated_db": 62.45
+            },
+            {
+              "center_hz": 78.75,
+              "raw_db": 66.35,
+              "compensated_db": 64.8
+            },
+            {
+              "center_hz": 99.21,
+              "raw_db": 67.81,
+              "compensated_db": 67.76
+            },
+            {
+              "center_hz": 125.0,
+              "raw_db": 66.59,
+              "compensated_db": 68.04
+            },
+            {
+              "center_hz": 157.49,
+              "raw_db": 64.23,
+              "compensated_db": 67.18
+            },
+            {
+              "center_hz": 198.43,
+              "raw_db": 62.54,
+              "compensated_db": 66.99
+            },
+            {
+              "center_hz": 250.0,
+              "raw_db": 55.05,
+              "compensated_db": 61.0
+            },
+            {
+              "center_hz": 314.98,
+              "raw_db": 57.27,
+              "compensated_db": 64.72
+            },
+            {
+              "center_hz": 396.85,
+              "raw_db": 56.4,
+              "compensated_db": 65.35
+            },
+            {
+              "center_hz": 500.0,
+              "raw_db": 57.2,
+              "compensated_db": 67.65
+            },
+            {
+              "center_hz": 629.96,
+              "raw_db": 48.6,
+              "compensated_db": 60.55
+            },
+            {
+              "center_hz": 793.7,
+              "raw_db": 48.02,
+              "compensated_db": 61.46
+            },
+            {
+              "center_hz": 1000.0,
+              "raw_db": 48.0,
+              "compensated_db": 62.95
+            },
+            {
+              "center_hz": 1259.92,
+              "raw_db": 50.29,
+              "compensated_db": 66.74
+            },
+            {
+              "center_hz": 1587.4,
+              "raw_db": 50.51,
+              "compensated_db": 68.46
+            },
+            {
+              "center_hz": 2000.0,
+              "raw_db": 49.59,
+              "compensated_db": 69.04
+            },
+            {
+              "center_hz": 2519.84,
+              "raw_db": 50.75,
+              "compensated_db": 71.7
+            },
+            {
+              "center_hz": 3174.8,
+              "raw_db": 51.61,
+              "compensated_db": 74.06
+            },
+            {
+              "center_hz": 4000.0,
+              "raw_db": 52.79,
+              "compensated_db": 76.73
+            },
+            {
+              "center_hz": 5039.68,
+              "raw_db": 53.12,
+              "compensated_db": 78.57
+            },
+            {
+              "center_hz": 6349.6,
+              "raw_db": 51.9,
+              "compensated_db": 78.84
+            },
+            {
+              "center_hz": 8000.0,
+              "raw_db": 51.18,
+              "compensated_db": 79.63
+            },
+            {
+              "center_hz": 10079.37,
+              "raw_db": 49.92,
+              "compensated_db": 79.86
+            },
+            {
+              "center_hz": 12699.21,
+              "raw_db": 46.02,
+              "compensated_db": 77.47
+            },
+            {
+              "center_hz": 16000.0,
+              "raw_db": 42.03,
+              "compensated_db": 74.97
+            },
+            {
+              "center_hz": 18952.25,
+              "raw_db": 36.79,
+              "compensated_db": 70.84
+            }
+          ]
+        },
+        "MASTER": {
+          "compensation_db_per_octave": 4.5,
+          "window_sec": 3.0,
+          "segments": 6,
+          "smoothing": "1/3 octave",
+          "regions_db": {
+            "infra_20_35": 26.13,
+            "sub_35_60": 54.63,
+            "weight_60_120": 64.36,
+            "plateau_90_4500": 70.57,
+            "high_4500_12000": 83.69,
+            "air_12000_20000": 80.29
+          },
+          "weight_60_120_vs_plateau_db": -6.21,
+          "sub_35_60_vs_plateau_db": -15.94,
+          "high_4500_12000_vs_plateau_db": 13.12,
+          "plateau_spread_db": 15.69,
+          "curve": [
+            {
+              "center_hz": 21.02,
+              "raw_db": 30.18,
+              "compensated_db": 20.05
+            },
+            {
+              "center_hz": 24.8,
+              "raw_db": 33.99,
+              "compensated_db": 24.94
+            },
+            {
+              "center_hz": 31.25,
+              "raw_db": 40.96,
+              "compensated_db": 33.41
+            },
+            {
+              "center_hz": 39.37,
+              "raw_db": 58.66,
+              "compensated_db": 52.61
+            },
+            {
+              "center_hz": 49.61,
+              "raw_db": 61.2,
+              "compensated_db": 56.65
+            },
+            {
+              "center_hz": 62.5,
+              "raw_db": 65.06,
+              "compensated_db": 62.01
+            },
+            {
+              "center_hz": 78.75,
+              "raw_db": 65.7,
+              "compensated_db": 64.15
+            },
+            {
+              "center_hz": 99.21,
+              "raw_db": 66.98,
+              "compensated_db": 66.93
+            },
+            {
+              "center_hz": 125.0,
+              "raw_db": 64.92,
+              "compensated_db": 66.36
+            },
+            {
+              "center_hz": 157.49,
+              "raw_db": 63.81,
+              "compensated_db": 66.76
+            },
+            {
+              "center_hz": 198.43,
+              "raw_db": 66.52,
+              "compensated_db": 70.97
+            },
+            {
+              "center_hz": 250.0,
+              "raw_db": 62.15,
+              "compensated_db": 68.09
+            },
+            {
+              "center_hz": 314.98,
+              "raw_db": 60.9,
+              "compensated_db": 68.35
+            },
+            {
+              "center_hz": 396.85,
+              "raw_db": 57.07,
+              "compensated_db": 66.02
+            },
+            {
+              "center_hz": 500.0,
+              "raw_db": 57.58,
+              "compensated_db": 68.03
+            },
+            {
+              "center_hz": 629.96,
+              "raw_db": 53.42,
+              "compensated_db": 65.37
+            },
+            {
+              "center_hz": 793.7,
+              "raw_db": 54.79,
+              "compensated_db": 68.24
+            },
+            {
+              "center_hz": 1000.0,
+              "raw_db": 55.26,
+              "compensated_db": 70.21
+            },
+            {
+              "center_hz": 1259.92,
+              "raw_db": 54.25,
+              "compensated_db": 70.69
+            },
+            {
+              "center_hz": 1587.4,
+              "raw_db": 55.78,
+              "compensated_db": 73.73
+            },
+            {
+              "center_hz": 2000.0,
+              "raw_db": 55.06,
+              "compensated_db": 74.51
+            },
+            {
+              "center_hz": 2519.84,
+              "raw_db": 55.49,
+              "compensated_db": 76.44
+            },
+            {
+              "center_hz": 3174.8,
+              "raw_db": 55.43,
+              "compensated_db": 77.88
+            },
+            {
+              "center_hz": 4000.0,
+              "raw_db": 57.11,
+              "compensated_db": 81.06
+            },
+            {
+              "center_hz": 5039.68,
+              "raw_db": 57.56,
+              "compensated_db": 83.01
+            },
+            {
+              "center_hz": 6349.6,
+              "raw_db": 56.2,
+              "compensated_db": 83.15
+            },
+            {
+              "center_hz": 8000.0,
+              "raw_db": 55.3,
+              "compensated_db": 83.75
+            },
+            {
+              "center_hz": 10079.37,
+              "raw_db": 54.92,
+              "compensated_db": 84.87
+            },
+            {
+              "center_hz": 12699.21,
+              "raw_db": 52.75,
+              "compensated_db": 84.2
+            },
+            {
+              "center_hz": 16000.0,
+              "raw_db": 49.0,
+              "compensated_db": 81.95
+            },
+            {
+              "center_hz": 18952.25,
+              "raw_db": 40.69,
+              "compensated_db": 74.74
+            }
+          ]
+        }
+      },
+      "kick_focus": {
+        "channel": 1,
+        "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+        "analysis_ranges": 0,
+        "active_sec": 0.0,
+        "kick_dynamic_range_db": 20.3,
+        "kick_punch_db": 49.34,
+        "kick_click_db": 12.36,
+        "kick_box_db": 22.51,
+        "kick_click_minus_punch_db": -36.98,
+        "kick_click_share_in_drums": 0.5345,
+        "kick_punch_share_in_drums": 0.8861,
+        "kick_click_share_in_master": 0.0401
+      },
+      "hierarchy_metrics": {
+        "cymbal_high_share_in_master": 0.1542
+      }
+    },
+    "after": {
+      "stems": [
+        {
+          "stem": "CYMBALS",
+          "channel_count": 1,
+          "channels": [
+            3
+          ],
+          "files": [
+            "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -39.36,
+          "dynamic_range_db": 24.66,
+          "crest_factor_db": 14.3,
+          "band_energy": {
+            "sub": -89.36,
+            "bass": -31.66,
+            "low_mid": -29.26,
+            "mid": -21.52,
+            "presence": -12.67
+          },
+          "mix_indexes": {
+            "sub_index": -52.14,
+            "bass_index": -35.59,
+            "body_index": -8.01,
+            "mud_index": -0.65,
+            "presence_index": 15.25,
+            "harshness_index": 19.94,
+            "sibilance_index": 31.64,
+            "air_index": 32.54
+          }
+        },
+        {
+          "stem": "DRUMS",
+          "channel_count": 6,
+          "channels": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            8
+          ],
+          "files": [
+            "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+            "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+            "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "08_tom_3_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -18.73,
+          "dynamic_range_db": 22.65,
+          "crest_factor_db": 12.1,
+          "band_energy": {
+            "sub": -27.31,
+            "bass": -11.49,
+            "low_mid": -22.96,
+            "mid": -19.18,
+            "presence": -14.42
+          },
+          "mix_indexes": {
+            "sub_index": -12.94,
+            "bass_index": 7.85,
+            "body_index": 0.77,
+            "mud_index": -8.13,
+            "presence_index": 1.69,
+            "harshness_index": 5.58,
+            "sibilance_index": 12.6,
+            "air_index": 13.29
+          }
+        },
+        {
+          "stem": "KICK",
+          "channel_count": 1,
+          "channels": [
+            1
+          ],
+          "files": [
+            "01_kick_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -19.63,
+          "dynamic_range_db": 22.98,
+          "crest_factor_db": 14.19,
+          "band_energy": {
+            "sub": -18.71,
+            "bass": -5.33,
+            "low_mid": -34.69,
+            "mid": -21.4,
+            "presence": -21.43
+          },
+          "mix_indexes": {
+            "sub_index": -1.65,
+            "bass_index": 21.74,
+            "body_index": 6.08,
+            "mud_index": -12.77,
+            "presence_index": 7.64,
+            "harshness_index": 11.24,
+            "sibilance_index": 0.71,
+            "air_index": -6.45
+          }
+        },
+        {
+          "stem": "MASTER",
+          "channel_count": 8,
+          "channels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "files": [
+            "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+            "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+            "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+            "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+            "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "08_tom_3_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -18.5,
+          "dynamic_range_db": 21.87,
+          "crest_factor_db": 11.37,
+          "band_energy": {
+            "sub": -31.07,
+            "bass": -14.89,
+            "low_mid": -24.9,
+            "mid": -17.41,
+            "presence": -13.17
+          },
+          "mix_indexes": {
+            "sub_index": -16.32,
+            "bass_index": 1.34,
+            "body_index": -0.37,
+            "mud_index": -5.69,
+            "presence_index": 4.85,
+            "harshness_index": 5.96,
+            "sibilance_index": 10.37,
+            "air_index": 10.99
+          }
+        },
+        {
+          "stem": "SNARE",
+          "channel_count": 1,
+          "channels": [
+            2
+          ],
+          "files": [
+            "02_snare_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -28.88,
+          "dynamic_range_db": 27.97,
+          "crest_factor_db": 16.62,
+          "band_energy": {
+            "sub": -62.09,
+            "bass": -19.71,
+            "low_mid": -15.76,
+            "mid": -14.39,
+            "presence": -12.23
+          },
+          "mix_indexes": {
+            "sub_index": -53.82,
+            "bass_index": -34.75,
+            "body_index": 4.84,
+            "mud_index": 7.54,
+            "presence_index": 14.67,
+            "harshness_index": 19.41,
+            "sibilance_index": 17.67,
+            "air_index": 9.09
+          }
+        },
+        {
+          "stem": "TOMS",
+          "channel_count": 3,
+          "channels": [
+            6,
+            7,
+            8
+          ],
+          "files": [
+            "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "08_tom_3_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -32.58,
+          "dynamic_range_db": 22.03,
+          "crest_factor_db": 5.3,
+          "band_energy": {
+            "sub": -44.93,
+            "bass": -12.35,
+            "low_mid": -26.22,
+            "mid": -15.85,
+            "presence": -11.97
+          },
+          "mix_indexes": {
+            "sub_index": -41.18,
+            "bass_index": 4.99,
+            "body_index": 11.35,
+            "mud_index": 0.02,
+            "presence_index": 6.6,
+            "harshness_index": 7.68,
+            "sibilance_index": 4.6,
+            "air_index": -1.65
+          }
+        },
+        {
+          "stem": "UNKNOWN",
+          "channel_count": 2,
+          "channels": [
+            4,
+            5
+          ],
+          "files": [
+            "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+            "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav"
+          ],
+          "rms_db": -23.91,
+          "dynamic_range_db": 20.93,
+          "crest_factor_db": 12.34,
+          "band_energy": {
+            "sub": -54.21,
+            "bass": -18.57,
+            "low_mid": -24.95,
+            "mid": -16.2,
+            "presence": -12.27
+          },
+          "mix_indexes": {
+            "sub_index": -44.62,
+            "bass_index": -24.05,
+            "body_index": 4.46,
+            "mud_index": 2.7,
+            "presence_index": 13.52,
+            "harshness_index": 13.02,
+            "sibilance_index": 10.7,
+            "air_index": 10.79
+          }
+        }
+      ],
+      "band_hierarchy": [
+        {
+          "band": "AIR",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4747,
+          "runner_up_stem": "CYMBALS",
+          "runner_up_share": 0.471
+        },
+        {
+          "band": "BASS",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4994,
+          "runner_up_stem": "KICK",
+          "runner_up_share": 0.3671
+        },
+        {
+          "band": "BODY",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4094,
+          "runner_up_stem": "TOMS",
+          "runner_up_share": 0.2994
+        },
+        {
+          "band": "HARSHNESS",
+          "dominant_stem": "UNKNOWN",
+          "dominant_share": 0.3439,
+          "runner_up_stem": "DRUMS",
+          "runner_up_share": 0.3281
+        },
+        {
+          "band": "LOW_MID",
+          "dominant_stem": "UNKNOWN",
+          "dominant_share": 0.72,
+          "runner_up_stem": "DRUMS",
+          "runner_up_share": 0.14
+        },
+        {
+          "band": "MUD",
+          "dominant_stem": "UNKNOWN",
+          "dominant_share": 0.5338,
+          "runner_up_stem": "DRUMS",
+          "runner_up_share": 0.2331
+        },
+        {
+          "band": "PRESENCE",
+          "dominant_stem": "UNKNOWN",
+          "dominant_share": 0.5901,
+          "runner_up_stem": "DRUMS",
+          "runner_up_share": 0.2049
+        },
+        {
+          "band": "SIBILANCE",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4713,
+          "runner_up_stem": "CYMBALS",
+          "runner_up_share": 0.4443
+        },
+        {
+          "band": "SUB",
+          "dominant_stem": "DRUMS",
+          "dominant_share": 0.4998,
+          "runner_up_stem": "KICK",
+          "runner_up_share": 0.4994
+        }
+      ],
+      "slope_conformity": {
+        "reference_tilt_db_per_octave": 4.5,
+        "master_mix_indexes": {
+          "sub_index": -16.32,
+          "bass_index": 1.34,
+          "body_index": -0.37,
+          "mud_index": -5.69,
+          "presence_index": 4.85,
+          "harshness_index": 5.96,
+          "sibilance_index": 10.37,
+          "air_index": 10.99
+        },
+        "sub_deficit_db": 16.32,
+        "bass_deficit_db": 0.0,
+        "body_deficit_db": 0.37
+      },
+      "tilt_conformity": {
+        "KICK": {
+          "compensation_db_per_octave": 4.5,
+          "window_sec": 3.0,
+          "segments": 6,
+          "smoothing": "1/3 octave",
+          "regions_db": {
+            "infra_20_35": 30.68,
+            "sub_35_60": 57.5,
+            "weight_60_120": 67.88,
+            "plateau_90_4500": 59.62,
+            "high_4500_12000": 63.92,
+            "air_12000_20000": 50.55
+          },
+          "weight_60_120_vs_plateau_db": 8.26,
+          "sub_35_60_vs_plateau_db": -2.12,
+          "high_4500_12000_vs_plateau_db": 4.3,
+          "plateau_spread_db": 27.91,
+          "curve": [
+            {
+              "center_hz": 21.02,
+              "raw_db": 33.89,
+              "compensated_db": 23.76
+            },
+            {
+              "center_hz": 24.8,
+              "raw_db": 39.92,
+              "compensated_db": 30.87
+            },
+            {
+              "center_hz": 31.25,
+              "raw_db": 44.95,
+              "compensated_db": 37.39
+            },
+            {
+              "center_hz": 39.37,
+              "raw_db": 61.09,
+              "compensated_db": 55.04
+            },
+            {
+              "center_hz": 49.61,
+              "raw_db": 64.53,
+              "compensated_db": 59.97
+            },
+            {
+              "center_hz": 62.5,
+              "raw_db": 68.87,
+              "compensated_db": 65.82
+            },
+            {
+              "center_hz": 78.75,
+              "raw_db": 69.7,
+              "compensated_db": 68.15
+            },
+            {
+              "center_hz": 99.21,
+              "raw_db": 69.73,
+              "compensated_db": 69.68
+            },
+            {
+              "center_hz": 125.0,
+              "raw_db": 66.72,
+              "compensated_db": 68.16
+            },
+            {
+              "center_hz": 157.49,
+              "raw_db": 64.82,
+              "compensated_db": 67.77
+            },
+            {
+              "center_hz": 198.43,
+              "raw_db": 57.62,
+              "compensated_db": 62.07
+            },
+            {
+              "center_hz": 250.0,
+              "raw_db": 49.0,
+              "compensated_db": 54.95
+            },
+            {
+              "center_hz": 314.98,
+              "raw_db": 38.09,
+              "compensated_db": 45.54
+            },
+            {
+              "center_hz": 396.85,
+              "raw_db": 36.26,
+              "compensated_db": 45.21
+            },
+            {
+              "center_hz": 500.0,
+              "raw_db": 36.46,
+              "compensated_db": 46.91
+            },
+            {
+              "center_hz": 629.96,
+              "raw_db": 38.78,
+              "compensated_db": 50.73
+            },
+            {
+              "center_hz": 793.7,
+              "raw_db": 40.05,
+              "compensated_db": 53.5
+            },
+            {
+              "center_hz": 1000.0,
+              "raw_db": 39.86,
+              "compensated_db": 54.81
+            },
+            {
+              "center_hz": 1259.92,
+              "raw_db": 43.67,
+              "compensated_db": 60.12
+            },
+            {
+              "center_hz": 1587.4,
+              "raw_db": 43.21,
+              "compensated_db": 61.16
+            },
+            {
+              "center_hz": 2000.0,
+              "raw_db": 42.2,
+              "compensated_db": 61.65
+            },
+            {
+              "center_hz": 2519.84,
+              "raw_db": 46.24,
+              "compensated_db": 67.19
+            },
+            {
+              "center_hz": 3174.8,
+              "raw_db": 48.51,
+              "compensated_db": 70.96
+            },
+            {
+              "center_hz": 4000.0,
+              "raw_db": 49.17,
+              "compensated_db": 73.12
+            },
+            {
+              "center_hz": 5039.68,
+              "raw_db": 43.57,
+              "compensated_db": 69.02
+            },
+            {
+              "center_hz": 6349.6,
+              "raw_db": 39.97,
+              "compensated_db": 66.92
+            },
+            {
+              "center_hz": 8000.0,
+              "raw_db": 32.66,
+              "compensated_db": 61.11
+            },
+            {
+              "center_hz": 10079.37,
+              "raw_db": 28.7,
+              "compensated_db": 58.65
+            },
+            {
+              "center_hz": 12699.21,
+              "raw_db": 26.06,
+              "compensated_db": 57.51
+            },
+            {
+              "center_hz": 16000.0,
+              "raw_db": 16.11,
+              "compensated_db": 49.06
+            },
+            {
+              "center_hz": 18952.25,
+              "raw_db": 11.03,
+              "compensated_db": 45.08
+            }
+          ]
+        },
+        "DRUMS": {
+          "compensation_db_per_octave": 4.5,
+          "window_sec": 3.0,
+          "segments": 6,
+          "smoothing": "1/3 octave",
+          "regions_db": {
+            "infra_20_35": 30.38,
+            "sub_35_60": 57.47,
+            "weight_60_120": 68.23,
+            "plateau_90_4500": 67.74,
+            "high_4500_12000": 79.34,
+            "air_12000_20000": 74.44
+          },
+          "weight_60_120_vs_plateau_db": 0.49,
+          "sub_35_60_vs_plateau_db": -10.27,
+          "high_4500_12000_vs_plateau_db": 11.6,
+          "plateau_spread_db": 17.32,
+          "curve": [
+            {
+              "center_hz": 21.02,
+              "raw_db": 33.52,
+              "compensated_db": 23.39
+            },
+            {
+              "center_hz": 24.8,
+              "raw_db": 39.54,
+              "compensated_db": 30.49
+            },
+            {
+              "center_hz": 31.25,
+              "raw_db": 44.8,
+              "compensated_db": 37.25
+            },
+            {
+              "center_hz": 39.37,
+              "raw_db": 61.38,
+              "compensated_db": 55.33
+            },
+            {
+              "center_hz": 49.61,
+              "raw_db": 64.16,
+              "compensated_db": 59.61
+            },
+            {
+              "center_hz": 62.5,
+              "raw_db": 69.29,
+              "compensated_db": 66.23
+            },
+            {
+              "center_hz": 78.75,
+              "raw_db": 69.82,
+              "compensated_db": 68.27
+            },
+            {
+              "center_hz": 99.21,
+              "raw_db": 70.23,
+              "compensated_db": 70.18
+            },
+            {
+              "center_hz": 125.0,
+              "raw_db": 68.59,
+              "compensated_db": 70.04
+            },
+            {
+              "center_hz": 157.49,
+              "raw_db": 66.04,
+              "compensated_db": 68.99
+            },
+            {
+              "center_hz": 198.43,
+              "raw_db": 62.8,
+              "compensated_db": 67.25
+            },
+            {
+              "center_hz": 250.0,
+              "raw_db": 55.47,
+              "compensated_db": 61.42
+            },
+            {
+              "center_hz": 314.98,
+              "raw_db": 57.27,
+              "compensated_db": 64.72
+            },
+            {
+              "center_hz": 396.85,
+              "raw_db": 56.42,
+              "compensated_db": 65.37
+            },
+            {
+              "center_hz": 500.0,
+              "raw_db": 57.21,
+              "compensated_db": 67.66
+            },
+            {
+              "center_hz": 629.96,
+              "raw_db": 48.65,
+              "compensated_db": 60.6
+            },
+            {
+              "center_hz": 793.7,
+              "raw_db": 48.19,
+              "compensated_db": 61.64
+            },
+            {
+              "center_hz": 1000.0,
+              "raw_db": 48.21,
+              "compensated_db": 63.16
+            },
+            {
+              "center_hz": 1259.92,
+              "raw_db": 50.6,
+              "compensated_db": 67.05
+            },
+            {
+              "center_hz": 1587.4,
+              "raw_db": 50.74,
+              "compensated_db": 68.69
+            },
+            {
+              "center_hz": 2000.0,
+              "raw_db": 49.87,
+              "compensated_db": 69.32
+            },
+            {
+              "center_hz": 2519.84,
+              "raw_db": 51.41,
+              "compensated_db": 72.36
+            },
+            {
+              "center_hz": 3174.8,
+              "raw_db": 52.83,
+              "compensated_db": 75.28
+            },
+            {
+              "center_hz": 4000.0,
+              "raw_db": 53.97,
+              "compensated_db": 77.92
+            },
+            {
+              "center_hz": 5039.68,
+              "raw_db": 53.41,
+              "compensated_db": 78.85
+            },
+            {
+              "center_hz": 6349.6,
+              "raw_db": 52.04,
+              "compensated_db": 78.99
+            },
+            {
+              "center_hz": 8000.0,
+              "raw_db": 51.21,
+              "compensated_db": 79.65
+            },
+            {
+              "center_hz": 10079.37,
+              "raw_db": 49.93,
+              "compensated_db": 79.88
+            },
+            {
+              "center_hz": 12699.21,
+              "raw_db": 46.04,
+              "compensated_db": 77.49
+            },
+            {
+              "center_hz": 16000.0,
+              "raw_db": 42.03,
+              "compensated_db": 74.98
+            },
+            {
+              "center_hz": 18952.25,
+              "raw_db": 36.8,
+              "compensated_db": 70.85
+            }
+          ]
+        },
+        "MASTER": {
+          "compensation_db_per_octave": 4.5,
+          "window_sec": 3.0,
+          "segments": 6,
+          "smoothing": "1/3 octave",
+          "regions_db": {
+            "infra_20_35": 30.42,
+            "sub_35_60": 57.4,
+            "weight_60_120": 67.81,
+            "plateau_90_4500": 71.02,
+            "high_4500_12000": 83.74,
+            "air_12000_20000": 80.3
+          },
+          "weight_60_120_vs_plateau_db": -3.21,
+          "sub_35_60_vs_plateau_db": -13.62,
+          "high_4500_12000_vs_plateau_db": 12.72,
+          "plateau_spread_db": 16.12,
+          "curve": [
+            {
+              "center_hz": 21.02,
+              "raw_db": 33.53,
+              "compensated_db": 23.41
+            },
+            {
+              "center_hz": 24.8,
+              "raw_db": 39.53,
+              "compensated_db": 30.48
+            },
+            {
+              "center_hz": 31.25,
+              "raw_db": 44.93,
+              "compensated_db": 37.38
+            },
+            {
+              "center_hz": 39.37,
+              "raw_db": 61.53,
+              "compensated_db": 55.48
+            },
+            {
+              "center_hz": 49.61,
+              "raw_db": 63.86,
+              "compensated_db": 59.31
+            },
+            {
+              "center_hz": 62.5,
+              "raw_db": 69.03,
+              "compensated_db": 65.98
+            },
+            {
+              "center_hz": 78.75,
+              "raw_db": 69.38,
+              "compensated_db": 67.83
+            },
+            {
+              "center_hz": 99.21,
+              "raw_db": 69.68,
+              "compensated_db": 69.62
+            },
+            {
+              "center_hz": 125.0,
+              "raw_db": 67.4,
+              "compensated_db": 68.85
+            },
+            {
+              "center_hz": 157.49,
+              "raw_db": 64.26,
+              "compensated_db": 67.21
+            },
+            {
+              "center_hz": 198.43,
+              "raw_db": 66.8,
+              "compensated_db": 71.25
+            },
+            {
+              "center_hz": 250.0,
+              "raw_db": 62.24,
+              "compensated_db": 68.19
+            },
+            {
+              "center_hz": 314.98,
+              "raw_db": 60.91,
+              "compensated_db": 68.36
+            },
+            {
+              "center_hz": 396.85,
+              "raw_db": 57.04,
+              "compensated_db": 65.99
+            },
+            {
+              "center_hz": 500.0,
+              "raw_db": 57.6,
+              "compensated_db": 68.05
+            },
+            {
+              "center_hz": 629.96,
+              "raw_db": 53.45,
+              "compensated_db": 65.4
+            },
+            {
+              "center_hz": 793.7,
+              "raw_db": 54.84,
+              "compensated_db": 68.29
+            },
+            {
+              "center_hz": 1000.0,
+              "raw_db": 55.29,
+              "compensated_db": 70.24
+            },
+            {
+              "center_hz": 1259.92,
+              "raw_db": 54.38,
+              "compensated_db": 70.83
+            },
+            {
+              "center_hz": 1587.4,
+              "raw_db": 55.87,
+              "compensated_db": 73.82
+            },
+            {
+              "center_hz": 2000.0,
+              "raw_db": 55.14,
+              "compensated_db": 74.59
+            },
+            {
+              "center_hz": 2519.84,
+              "raw_db": 55.72,
+              "compensated_db": 76.67
+            },
+            {
+              "center_hz": 3174.8,
+              "raw_db": 55.97,
+              "compensated_db": 78.42
+            },
+            {
+              "center_hz": 4000.0,
+              "raw_db": 57.58,
+              "compensated_db": 81.53
+            },
+            {
+              "center_hz": 5039.68,
+              "raw_db": 57.66,
+              "compensated_db": 83.11
+            },
+            {
+              "center_hz": 6349.6,
+              "raw_db": 56.26,
+              "compensated_db": 83.21
+            },
+            {
+              "center_hz": 8000.0,
+              "raw_db": 55.31,
+              "compensated_db": 83.76
+            },
+            {
+              "center_hz": 10079.37,
+              "raw_db": 54.92,
+              "compensated_db": 84.87
+            },
+            {
+              "center_hz": 12699.21,
+              "raw_db": 52.75,
+              "compensated_db": 84.2
+            },
+            {
+              "center_hz": 16000.0,
+              "raw_db": 49.0,
+              "compensated_db": 81.95
+            },
+            {
+              "center_hz": 18952.25,
+              "raw_db": 40.69,
+              "compensated_db": 74.74
+            }
+          ]
+        }
+      },
+      "kick_focus": {
+        "channel": 1,
+        "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+        "analysis_ranges": 0,
+        "active_sec": 0.0,
+        "kick_dynamic_range_db": 20.53,
+        "kick_punch_db": 53.09,
+        "kick_click_db": 17.13,
+        "kick_box_db": 24.21,
+        "kick_click_minus_punch_db": -35.95,
+        "kick_click_share_in_drums": 0.6278,
+        "kick_punch_share_in_drums": 1.4298,
+        "kick_click_share_in_master": 0.1115
+      },
+      "hierarchy_metrics": {
+        "cymbal_high_share_in_master": 0.1521
+      }
+    },
+    "actions": [
+      {
+        "type": "kick_compressor_reseat",
+        "before": {
+          "threshold_db": -20.0,
+          "ratio": 4.2,
+          "attack_ms": 8.0,
+          "release_ms": 90.0
+        },
+        "after": {
+          "threshold_db": -23.5,
+          "ratio": 5.4,
+          "attack_ms": 10.0,
+          "release_ms": 90.0
+        },
+        "reason": "Kick stem stays too spiky relative to the drum/master stems and needs firmer body control without choking the click."
+      },
+      {
+        "type": "kick_click_boost",
+        "target": {
+          "freq_hz": 3500.0,
+          "gain_db": 2.1,
+          "q": 1.6
+        },
+        "result": {
+          "mode": "merge",
+          "before": {
+            "freq_hz": 4200.0,
+            "gain_db": 2.0,
+            "q": 1.2
+          },
+          "after": {
+            "freq_hz": 4200.0,
+            "gain_db": 4.1,
+            "q": 1.4
+          }
+        },
+        "reason": "Kick click share inside the drum and master stems is too low."
+      },
+      {
+        "type": "kick_box_cleanup",
+        "target": {
+          "freq_hz": 320.0,
+          "gain_db": -1.4,
+          "q": 1.25
+        },
+        "result": {
+          "mode": "merge",
+          "before": {
+            "freq_hz": 320.0,
+            "gain_db": -3.0,
+            "q": 1.3
+          },
+          "after": {
+            "freq_hz": 320.0,
+            "gain_db": -4.4,
+            "q": 1.27
+          }
+        },
+        "reason": "Kick box energy is overtaking the click band and keeps the drum from sitting forward in the mix."
+      },
+      {
+        "type": "master_slope_low_end_support_kick",
+        "target": {
+          "freq_hz": 62.0,
+          "gain_db": 2.4,
+          "q": 0.95
+        },
+        "result": {
+          "mode": "merge",
+          "before": {
+            "freq_hz": 60.0,
+            "gain_db": 3.66,
+            "q": 0.82
+          },
+          "after": {
+            "freq_hz": 60.0,
+            "gain_db": 6.0,
+            "q": 0.89
+          }
+        },
+        "reason": "AutoFOH slope-conformity check found a low-end deficit versus the -4.5 dB/oct target line."
+      }
+    ]
+  },
+  "reference_vocal_fx_focus": {
+    "enabled": false,
+    "reason": "disabled_by_flag"
+  },
+  "dynamic_vocal_priority": {
+    "enabled": false,
+    "requested_disable_flag": false,
+    "notes": [
+      "Vocal ducking is disabled.",
+      "Vocal space must be created by priority EQ and measured analyzer corrections."
+    ]
+  },
+  "kick_presence_boost": {
+    "enabled": false
+  },
+  "kick_focus_cymbal_cut": {
+    "enabled": false
+  },
+  "soft_master": true,
+  "master_target_lufs": -15.8,
+  "autofoh_analyzer_pass": {
+    "enabled": true,
+    "measurement_mode": "autofoh_analyzers_iterative",
+    "measurement_channels": {
+      "1": {
+        "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "kick",
+        "source_role": "kick",
+        "stem_roles": [
+          "KICK",
+          "DRUMS"
+        ],
+        "priority": 0.72,
+        "analysis_mode": "windowed_full_track_fallback",
+        "analysis_active_sec": 18.0,
+        "analysis_active_ratio": 0.6829,
+        "analysis_threshold_db": -20.29,
+        "measurement_block_sec": 0.0929,
+        "measurement_block_samples": 4096
+      },
+      "2": {
+        "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "snare",
+        "source_role": "snare",
+        "stem_roles": [
+          "SNARE",
+          "DRUMS"
+        ],
+        "priority": 0.7,
+        "analysis_mode": "windowed_full_track_fallback",
+        "analysis_active_sec": 18.0,
+        "analysis_active_ratio": 0.6829,
+        "analysis_threshold_db": -15.64,
+        "measurement_block_sec": 0.0929,
+        "measurement_block_samples": 4096
+      },
+      "3": {
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "source_role": "hihat",
+        "stem_roles": [
+          "CYMBALS",
+          "DRUMS"
+        ],
+        "priority": 0.58,
+        "analysis_mode": "event_based",
+        "analysis_active_sec": 2.56,
+        "analysis_active_ratio": 0.0971,
+        "analysis_threshold_db": -31.05,
+        "measurement_block_sec": 0.0929,
+        "measurement_block_samples": 4096
+      },
+      "4": {
+        "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "source_role": "unknown",
+        "stem_roles": [
+          "UNKNOWN"
+        ],
+        "priority": 0.0,
+        "analysis_mode": "windowed_full_track",
+        "analysis_active_sec": 18.0,
+        "analysis_active_ratio": 0.6829,
+        "analysis_threshold_db": null,
+        "measurement_block_sec": 0.0929,
+        "measurement_block_samples": 4096
+      },
+      "5": {
+        "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "custom",
+        "source_role": "unknown",
+        "stem_roles": [
+          "UNKNOWN"
+        ],
+        "priority": 0.0,
+        "analysis_mode": "windowed_full_track",
+        "analysis_active_sec": 18.0,
+        "analysis_active_ratio": 0.6829,
+        "analysis_threshold_db": null,
+        "measurement_block_sec": 0.0929,
+        "measurement_block_samples": 4096
+      },
+      "6": {
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "source_role": "tom",
+        "stem_roles": [
+          "TOMS",
+          "DRUMS"
+        ],
+        "priority": 0.68,
+        "analysis_mode": "event_based",
+        "analysis_active_sec": 1.115,
+        "analysis_active_ratio": 0.0423,
+        "analysis_threshold_db": -26.45,
+        "measurement_block_sec": 0.0929,
+        "measurement_block_samples": 4096
+      },
+      "7": {
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "source_role": "tom",
+        "stem_roles": [
+          "TOMS",
+          "DRUMS"
+        ],
+        "priority": 0.68,
+        "analysis_mode": "event_based",
+        "analysis_active_sec": 0.575,
+        "analysis_active_ratio": 0.0218,
+        "analysis_threshold_db": -26.14,
+        "measurement_block_sec": 0.0929,
+        "measurement_block_samples": 4096
+      },
+      "8": {
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "source_role": "tom",
+        "stem_roles": [
+          "TOMS",
+          "DRUMS"
+        ],
+        "priority": 0.68,
+        "analysis_mode": "event_based",
+        "analysis_active_sec": 1.305,
+        "analysis_active_ratio": 0.0495,
+        "analysis_threshold_db": -25.91,
+        "measurement_block_sec": 0.0929,
+        "measurement_block_samples": 4096
+      }
+    },
+    "master_indexes": {
+      "SubIndex": -14.042,
+      "BassIndex": 0.334,
+      "BodyIndex": -2.343,
+      "MudIndex": -9.211,
+      "PresenceIndex": 7.514,
+      "HarshnessIndex": 10.685,
+      "SibilanceIndex": 13.924,
+      "AirIndex": 14.477
+    },
+    "detected_problems": [
+      {
+        "label": "harshness_excess",
+        "problem": {
+          "problem_type": "harshness_excess",
+          "description": "Sustained 3-6 kHz excess is making the mix harsh",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "HARSHNESS",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.679,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "candidate_actions": [
+          {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          }
+        ],
+        "round": 1
+      },
+      {
+        "label": "sibilance_excess",
+        "problem": {
+          "problem_type": "sibilance_excess",
+          "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.341,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "candidate_actions": [],
+        "round": 1
+      },
+      {
+        "label": "cymbal_buildup",
+        "problem": {
+          "problem_type": "cymbal_buildup",
+          "description": "Measured direct cymbal energy is dominating the upper bands",
+          "channel_id": 3,
+          "stem": "DRUMS",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 82.44361132616203,
+          "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 1.0,
+            "action_confidence": 0.82,
+            "risk_score": 0.22
+          }
+        },
+        "candidate_actions": [
+          {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -2.25,
+            "delta_db": -2.25,
+            "is_lead": false
+          }
+        ],
+        "round": 1
+      },
+      {
+        "label": "harshness_excess",
+        "problem": {
+          "problem_type": "harshness_excess",
+          "description": "Sustained 3-6 kHz excess is making the mix harsh",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "HARSHNESS",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.656,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "candidate_actions": [
+          {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          }
+        ],
+        "round": 2
+      },
+      {
+        "label": "sibilance_excess",
+        "problem": {
+          "problem_type": "sibilance_excess",
+          "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.383,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "candidate_actions": [
+          {
+            "action_type": "ChannelEQMove",
+            "reason": "sibilance_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 4,
+            "freq_hz": 7500.0,
+            "gain_db": -1.0,
+            "q": 2.0
+          }
+        ],
+        "round": 2
+      },
+      {
+        "label": "cymbal_buildup",
+        "problem": {
+          "problem_type": "cymbal_buildup",
+          "description": "Measured direct cymbal energy is dominating the upper bands",
+          "channel_id": 3,
+          "stem": "DRUMS",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 82.44361025107825,
+          "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 1.0,
+            "action_confidence": 0.82,
+            "risk_score": 0.22
+          }
+        },
+        "candidate_actions": [
+          {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -3.25,
+            "delta_db": -2.25,
+            "is_lead": false
+          }
+        ],
+        "round": 2
+      },
+      {
+        "label": "harshness_excess",
+        "problem": {
+          "problem_type": "harshness_excess",
+          "description": "Sustained 3-6 kHz excess is making the mix harsh",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "HARSHNESS",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.67,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "candidate_actions": [
+          {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          }
+        ],
+        "round": 3
+      },
+      {
+        "label": "sibilance_excess",
+        "problem": {
+          "problem_type": "sibilance_excess",
+          "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.365,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "candidate_actions": [
+          {
+            "action_type": "ChannelEQMove",
+            "reason": "sibilance_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 4,
+            "freq_hz": 7500.0,
+            "gain_db": -1.0,
+            "q": 2.0
+          }
+        ],
+        "round": 3
+      },
+      {
+        "label": "cymbal_buildup",
+        "problem": {
+          "problem_type": "cymbal_buildup",
+          "description": "Measured direct cymbal energy is dominating the upper bands",
+          "channel_id": 3,
+          "stem": "DRUMS",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 82.44360934827654,
+          "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 1.0,
+            "action_confidence": 0.82,
+            "risk_score": 0.22
+          }
+        },
+        "candidate_actions": [
+          {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -4.25,
+            "delta_db": -2.25,
+            "is_lead": false
+          }
+        ],
+        "round": 3
+      }
+    ],
+    "applied_actions": [
+      {
+        "label": "harshness_excess",
+        "requested_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "harshness_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 3,
+          "freq_hz": 4200.0,
+          "gain_db": -1.0,
+          "q": 1.8
+        },
+        "applied_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "harshness_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 3,
+          "freq_hz": 4200.0,
+          "gain_db": -1.0,
+          "q": 1.8
+        },
+        "sent": true,
+        "bounded": false,
+        "allowed": true,
+        "supported": true,
+        "message": "sent",
+        "problem": {
+          "problem_type": "harshness_excess",
+          "description": "Sustained 3-6 kHz excess is making the mix harsh",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "HARSHNESS",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.679,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "round": 1
+      },
+      {
+        "label": "cymbal_buildup",
+        "requested_action": {
+          "action_type": "ChannelFaderMove",
+          "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "channel_id": 3,
+          "target_db": -2.25,
+          "delta_db": -2.25,
+          "is_lead": false
+        },
+        "applied_action": {
+          "action_type": "ChannelFaderMove",
+          "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "channel_id": 3,
+          "target_db": -1.0,
+          "delta_db": -1.0,
+          "is_lead": false
+        },
+        "sent": true,
+        "bounded": true,
+        "allowed": true,
+        "supported": true,
+        "message": "sent",
+        "problem": {
+          "problem_type": "cymbal_buildup",
+          "description": "Measured direct cymbal energy is dominating the upper bands",
+          "channel_id": 3,
+          "stem": "DRUMS",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 82.44361132616203,
+          "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 1.0,
+            "action_confidence": 0.82,
+            "risk_score": 0.22
+          }
+        },
+        "round": 1
+      },
+      {
+        "label": "harshness_excess",
+        "requested_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "harshness_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 3,
+          "freq_hz": 4200.0,
+          "gain_db": -1.0,
+          "q": 1.8
+        },
+        "applied_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "harshness_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 3,
+          "freq_hz": 4200.0,
+          "gain_db": -1.0,
+          "q": 1.8
+        },
+        "sent": true,
+        "bounded": false,
+        "allowed": true,
+        "supported": true,
+        "message": "sent",
+        "problem": {
+          "problem_type": "harshness_excess",
+          "description": "Sustained 3-6 kHz excess is making the mix harsh",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "HARSHNESS",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.656,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "round": 2
+      },
+      {
+        "label": "sibilance_excess",
+        "requested_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "sibilance_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 4,
+          "freq_hz": 7500.0,
+          "gain_db": -1.0,
+          "q": 2.0
+        },
+        "applied_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "sibilance_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 4,
+          "freq_hz": 7500.0,
+          "gain_db": -1.0,
+          "q": 2.0
+        },
+        "sent": true,
+        "bounded": false,
+        "allowed": true,
+        "supported": true,
+        "message": "sent",
+        "problem": {
+          "problem_type": "sibilance_excess",
+          "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.383,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "round": 2
+      },
+      {
+        "label": "cymbal_buildup",
+        "requested_action": {
+          "action_type": "ChannelFaderMove",
+          "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "channel_id": 3,
+          "target_db": -3.25,
+          "delta_db": -2.25,
+          "is_lead": false
+        },
+        "applied_action": {
+          "action_type": "ChannelFaderMove",
+          "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "channel_id": 3,
+          "target_db": -2.0,
+          "delta_db": -1.0,
+          "is_lead": false
+        },
+        "sent": true,
+        "bounded": true,
+        "allowed": true,
+        "supported": true,
+        "message": "sent",
+        "problem": {
+          "problem_type": "cymbal_buildup",
+          "description": "Measured direct cymbal energy is dominating the upper bands",
+          "channel_id": 3,
+          "stem": "DRUMS",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 82.44361025107825,
+          "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 1.0,
+            "action_confidence": 0.82,
+            "risk_score": 0.22
+          }
+        },
+        "round": 2
+      },
+      {
+        "label": "harshness_excess",
+        "requested_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "harshness_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 3,
+          "freq_hz": 4200.0,
+          "gain_db": -1.0,
+          "q": 1.8
+        },
+        "applied_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "harshness_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 3,
+          "freq_hz": 4200.0,
+          "gain_db": -1.0,
+          "q": 1.8
+        },
+        "sent": true,
+        "bounded": false,
+        "allowed": true,
+        "supported": true,
+        "message": "sent",
+        "problem": {
+          "problem_type": "harshness_excess",
+          "description": "Sustained 3-6 kHz excess is making the mix harsh",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "HARSHNESS",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.67,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "round": 3
+      },
+      {
+        "label": "sibilance_excess",
+        "requested_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "sibilance_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 4,
+          "freq_hz": 7500.0,
+          "gain_db": -1.0,
+          "q": 2.0
+        },
+        "applied_action": {
+          "action_type": "ChannelEQMove",
+          "reason": "sibilance_excess cleanup on UNKNOWN",
+          "channel_id": 5,
+          "band": 4,
+          "freq_hz": 7500.0,
+          "gain_db": -1.0,
+          "q": 2.0
+        },
+        "sent": true,
+        "bounded": false,
+        "allowed": true,
+        "supported": true,
+        "message": "sent",
+        "problem": {
+          "problem_type": "sibilance_excess",
+          "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+          "channel_id": 5,
+          "stem": "UNKNOWN",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 1.0,
+          "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 0.365,
+            "action_confidence": 0.9,
+            "risk_score": 0.35
+          }
+        },
+        "round": 3
+      },
+      {
+        "label": "cymbal_buildup",
+        "requested_action": {
+          "action_type": "ChannelFaderMove",
+          "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "channel_id": 3,
+          "target_db": -4.25,
+          "delta_db": -2.25,
+          "is_lead": false
+        },
+        "applied_action": {
+          "action_type": "ChannelFaderMove",
+          "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "channel_id": 3,
+          "target_db": -3.0,
+          "delta_db": -1.0,
+          "is_lead": false
+        },
+        "sent": true,
+        "bounded": true,
+        "allowed": true,
+        "supported": true,
+        "message": "sent",
+        "problem": {
+          "problem_type": "cymbal_buildup",
+          "description": "Measured direct cymbal energy is dominating the upper bands",
+          "channel_id": 3,
+          "stem": "DRUMS",
+          "band_name": "SIBILANCE",
+          "persistence_sec": 82.44360934827654,
+          "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+          "confidence_risk": {
+            "problem_confidence": 1.0,
+            "culprit_confidence": 1.0,
+            "action_confidence": 0.82,
+            "risk_score": 0.22
+          }
+        },
+        "round": 3
+      }
+    ],
+    "virtual_console_calls": [
+      {
+        "cmd": "set_eq_band",
+        "channel": 5,
+        "band": 3,
+        "before": [
+          4200.0,
+          -1.0,
+          1.8
+        ],
+        "after": [
+          4200.0,
+          -1.0,
+          1.8
+        ]
+      },
+      {
+        "cmd": "set_eq_band",
+        "channel": 5,
+        "band": 4,
+        "before": [
+          7500.0,
+          -1.0,
+          2.0
+        ],
+        "after": [
+          7500.0,
+          -1.0,
+          2.0
+        ]
+      },
+      {
+        "cmd": "set_fader",
+        "channel": 3,
+        "before_db": -2.0,
+        "after_db": -3.0
+      }
+    ],
+    "notes": [
+      "All additional offline correction moves in this pass come from measured AutoFOH detector outputs.",
+      "Lead handoff and cymbal buildup decisions are derived from the same measured analyzer snapshot.",
+      "Legacy codex heuristic correction layers are disabled in analyzer-only mode.",
+      "Offline analyzer mode runs up to three bounded measurement rounds so small safety-limited actions can converge audibly."
+    ],
+    "round": 3,
+    "round_count": 3,
+    "rounds": [
+      {
+        "enabled": true,
+        "measurement_mode": "autofoh_analyzers",
+        "measurement_channels": {
+          "1": {
+            "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "kick",
+            "source_role": "kick",
+            "stem_roles": [
+              "KICK",
+              "DRUMS"
+            ],
+            "priority": 0.72,
+            "analysis_mode": "windowed_full_track_fallback",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": -20.29,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "2": {
+            "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "snare",
+            "source_role": "snare",
+            "stem_roles": [
+              "SNARE",
+              "DRUMS"
+            ],
+            "priority": 0.7,
+            "analysis_mode": "windowed_full_track_fallback",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": -15.64,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "3": {
+            "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "hi_hat",
+            "source_role": "hihat",
+            "stem_roles": [
+              "CYMBALS",
+              "DRUMS"
+            ],
+            "priority": 0.58,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 2.56,
+            "analysis_active_ratio": 0.0971,
+            "analysis_threshold_db": -29.05,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "4": {
+            "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "custom",
+            "source_role": "unknown",
+            "stem_roles": [
+              "UNKNOWN"
+            ],
+            "priority": 0.0,
+            "analysis_mode": "windowed_full_track",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": null,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "5": {
+            "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "custom",
+            "source_role": "unknown",
+            "stem_roles": [
+              "UNKNOWN"
+            ],
+            "priority": 0.0,
+            "analysis_mode": "windowed_full_track",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": null,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "6": {
+            "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 1.115,
+            "analysis_active_ratio": 0.0423,
+            "analysis_threshold_db": -26.45,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "7": {
+            "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 0.575,
+            "analysis_active_ratio": 0.0218,
+            "analysis_threshold_db": -26.14,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "8": {
+            "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 1.305,
+            "analysis_active_ratio": 0.0495,
+            "analysis_threshold_db": -25.91,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          }
+        },
+        "master_indexes": {
+          "SubIndex": -14.077,
+          "BassIndex": 0.239,
+          "BodyIndex": -2.808,
+          "MudIndex": -9.601,
+          "PresenceIndex": 7.434,
+          "HarshnessIndex": 11.393,
+          "SibilanceIndex": 15.138,
+          "AirIndex": 14.767
+        },
+        "detected_problems": [
+          {
+            "label": "harshness_excess",
+            "problem": {
+              "problem_type": "harshness_excess",
+              "description": "Sustained 3-6 kHz excess is making the mix harsh",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "HARSHNESS",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.679,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            },
+            "candidate_actions": [
+              {
+                "action_type": "ChannelEQMove",
+                "reason": "harshness_excess cleanup on UNKNOWN",
+                "channel_id": 5,
+                "band": 3,
+                "freq_hz": 4200.0,
+                "gain_db": -1.0,
+                "q": 1.8
+              }
+            ]
+          },
+          {
+            "label": "sibilance_excess",
+            "problem": {
+              "problem_type": "sibilance_excess",
+              "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.341,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            },
+            "candidate_actions": []
+          },
+          {
+            "label": "cymbal_buildup",
+            "problem": {
+              "problem_type": "cymbal_buildup",
+              "description": "Measured direct cymbal energy is dominating the upper bands",
+              "channel_id": 3,
+              "stem": "DRUMS",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 82.44361132616203,
+              "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 1.0,
+                "action_confidence": 0.82,
+                "risk_score": 0.22
+              }
+            },
+            "candidate_actions": [
+              {
+                "action_type": "ChannelFaderMove",
+                "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+                "channel_id": 3,
+                "target_db": -2.25,
+                "delta_db": -2.25,
+                "is_lead": false
+              }
+            ]
+          }
+        ],
+        "applied_actions": [
+          {
+            "label": "harshness_excess",
+            "requested_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "harshness_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 3,
+              "freq_hz": 4200.0,
+              "gain_db": -1.0,
+              "q": 1.8
+            },
+            "applied_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "harshness_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 3,
+              "freq_hz": 4200.0,
+              "gain_db": -1.0,
+              "q": 1.8
+            },
+            "sent": true,
+            "bounded": false,
+            "allowed": true,
+            "supported": true,
+            "message": "sent",
+            "problem": {
+              "problem_type": "harshness_excess",
+              "description": "Sustained 3-6 kHz excess is making the mix harsh",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "HARSHNESS",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.679,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            }
+          },
+          {
+            "label": "cymbal_buildup",
+            "requested_action": {
+              "action_type": "ChannelFaderMove",
+              "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+              "channel_id": 3,
+              "target_db": -2.25,
+              "delta_db": -2.25,
+              "is_lead": false
+            },
+            "applied_action": {
+              "action_type": "ChannelFaderMove",
+              "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+              "channel_id": 3,
+              "target_db": -1.0,
+              "delta_db": -1.0,
+              "is_lead": false
+            },
+            "sent": true,
+            "bounded": true,
+            "allowed": true,
+            "supported": true,
+            "message": "sent",
+            "problem": {
+              "problem_type": "cymbal_buildup",
+              "description": "Measured direct cymbal energy is dominating the upper bands",
+              "channel_id": 3,
+              "stem": "DRUMS",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 82.44361132616203,
+              "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 1.0,
+                "action_confidence": 0.82,
+                "risk_score": 0.22
+              }
+            }
+          }
+        ],
+        "virtual_console_calls": [
+          {
+            "cmd": "set_eq_band",
+            "channel": 5,
+            "band": 3,
+            "before": [
+              1000.0,
+              0.0,
+              1.0
+            ],
+            "after": [
+              4200.0,
+              -1.0,
+              1.8
+            ]
+          },
+          {
+            "cmd": "set_fader",
+            "channel": 3,
+            "before_db": 0.0,
+            "after_db": -1.0
+          }
+        ],
+        "notes": [
+          "All additional offline correction moves in this pass come from measured AutoFOH detector outputs.",
+          "Lead handoff and cymbal buildup decisions are derived from the same measured analyzer snapshot.",
+          "Legacy codex heuristic correction layers are disabled in analyzer-only mode."
+        ],
+        "round": 1
+      },
+      {
+        "enabled": true,
+        "measurement_mode": "autofoh_analyzers",
+        "measurement_channels": {
+          "1": {
+            "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "kick",
+            "source_role": "kick",
+            "stem_roles": [
+              "KICK",
+              "DRUMS"
+            ],
+            "priority": 0.72,
+            "analysis_mode": "windowed_full_track_fallback",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": -20.29,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "2": {
+            "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "snare",
+            "source_role": "snare",
+            "stem_roles": [
+              "SNARE",
+              "DRUMS"
+            ],
+            "priority": 0.7,
+            "analysis_mode": "windowed_full_track_fallback",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": -15.64,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "3": {
+            "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "hi_hat",
+            "source_role": "hihat",
+            "stem_roles": [
+              "CYMBALS",
+              "DRUMS"
+            ],
+            "priority": 0.58,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 2.56,
+            "analysis_active_ratio": 0.0971,
+            "analysis_threshold_db": -30.05,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "4": {
+            "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "custom",
+            "source_role": "unknown",
+            "stem_roles": [
+              "UNKNOWN"
+            ],
+            "priority": 0.0,
+            "analysis_mode": "windowed_full_track",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": null,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "5": {
+            "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "custom",
+            "source_role": "unknown",
+            "stem_roles": [
+              "UNKNOWN"
+            ],
+            "priority": 0.0,
+            "analysis_mode": "windowed_full_track",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": null,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "6": {
+            "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 1.115,
+            "analysis_active_ratio": 0.0423,
+            "analysis_threshold_db": -26.45,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "7": {
+            "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 0.575,
+            "analysis_active_ratio": 0.0218,
+            "analysis_threshold_db": -26.14,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "8": {
+            "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 1.305,
+            "analysis_active_ratio": 0.0495,
+            "analysis_threshold_db": -25.91,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          }
+        },
+        "master_indexes": {
+          "SubIndex": -14.058,
+          "BassIndex": 0.291,
+          "BodyIndex": -2.561,
+          "MudIndex": -9.396,
+          "PresenceIndex": 7.328,
+          "HarshnessIndex": 10.741,
+          "SibilanceIndex": 14.846,
+          "AirIndex": 14.689
+        },
+        "detected_problems": [
+          {
+            "label": "harshness_excess",
+            "problem": {
+              "problem_type": "harshness_excess",
+              "description": "Sustained 3-6 kHz excess is making the mix harsh",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "HARSHNESS",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.656,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            },
+            "candidate_actions": [
+              {
+                "action_type": "ChannelEQMove",
+                "reason": "harshness_excess cleanup on UNKNOWN",
+                "channel_id": 5,
+                "band": 3,
+                "freq_hz": 4200.0,
+                "gain_db": -1.0,
+                "q": 1.8
+              }
+            ]
+          },
+          {
+            "label": "sibilance_excess",
+            "problem": {
+              "problem_type": "sibilance_excess",
+              "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.383,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            },
+            "candidate_actions": [
+              {
+                "action_type": "ChannelEQMove",
+                "reason": "sibilance_excess cleanup on UNKNOWN",
+                "channel_id": 5,
+                "band": 4,
+                "freq_hz": 7500.0,
+                "gain_db": -1.0,
+                "q": 2.0
+              }
+            ]
+          },
+          {
+            "label": "cymbal_buildup",
+            "problem": {
+              "problem_type": "cymbal_buildup",
+              "description": "Measured direct cymbal energy is dominating the upper bands",
+              "channel_id": 3,
+              "stem": "DRUMS",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 82.44361025107825,
+              "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 1.0,
+                "action_confidence": 0.82,
+                "risk_score": 0.22
+              }
+            },
+            "candidate_actions": [
+              {
+                "action_type": "ChannelFaderMove",
+                "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+                "channel_id": 3,
+                "target_db": -3.25,
+                "delta_db": -2.25,
+                "is_lead": false
+              }
+            ]
+          }
+        ],
+        "applied_actions": [
+          {
+            "label": "harshness_excess",
+            "requested_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "harshness_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 3,
+              "freq_hz": 4200.0,
+              "gain_db": -1.0,
+              "q": 1.8
+            },
+            "applied_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "harshness_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 3,
+              "freq_hz": 4200.0,
+              "gain_db": -1.0,
+              "q": 1.8
+            },
+            "sent": true,
+            "bounded": false,
+            "allowed": true,
+            "supported": true,
+            "message": "sent",
+            "problem": {
+              "problem_type": "harshness_excess",
+              "description": "Sustained 3-6 kHz excess is making the mix harsh",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "HARSHNESS",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.656,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            }
+          },
+          {
+            "label": "sibilance_excess",
+            "requested_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "sibilance_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 4,
+              "freq_hz": 7500.0,
+              "gain_db": -1.0,
+              "q": 2.0
+            },
+            "applied_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "sibilance_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 4,
+              "freq_hz": 7500.0,
+              "gain_db": -1.0,
+              "q": 2.0
+            },
+            "sent": true,
+            "bounded": false,
+            "allowed": true,
+            "supported": true,
+            "message": "sent",
+            "problem": {
+              "problem_type": "sibilance_excess",
+              "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.383,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            }
+          },
+          {
+            "label": "cymbal_buildup",
+            "requested_action": {
+              "action_type": "ChannelFaderMove",
+              "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+              "channel_id": 3,
+              "target_db": -3.25,
+              "delta_db": -2.25,
+              "is_lead": false
+            },
+            "applied_action": {
+              "action_type": "ChannelFaderMove",
+              "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+              "channel_id": 3,
+              "target_db": -2.0,
+              "delta_db": -1.0,
+              "is_lead": false
+            },
+            "sent": true,
+            "bounded": true,
+            "allowed": true,
+            "supported": true,
+            "message": "sent",
+            "problem": {
+              "problem_type": "cymbal_buildup",
+              "description": "Measured direct cymbal energy is dominating the upper bands",
+              "channel_id": 3,
+              "stem": "DRUMS",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 82.44361025107825,
+              "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 1.0,
+                "action_confidence": 0.82,
+                "risk_score": 0.22
+              }
+            }
+          }
+        ],
+        "virtual_console_calls": [
+          {
+            "cmd": "set_eq_band",
+            "channel": 5,
+            "band": 3,
+            "before": [
+              4200.0,
+              -1.0,
+              1.8
+            ],
+            "after": [
+              4200.0,
+              -1.0,
+              1.8
+            ]
+          },
+          {
+            "cmd": "set_eq_band",
+            "channel": 5,
+            "band": 4,
+            "before": [
+              1000.0,
+              0.0,
+              1.0
+            ],
+            "after": [
+              7500.0,
+              -1.0,
+              2.0
+            ]
+          },
+          {
+            "cmd": "set_fader",
+            "channel": 3,
+            "before_db": -1.0,
+            "after_db": -2.0
+          }
+        ],
+        "notes": [
+          "All additional offline correction moves in this pass come from measured AutoFOH detector outputs.",
+          "Lead handoff and cymbal buildup decisions are derived from the same measured analyzer snapshot.",
+          "Legacy codex heuristic correction layers are disabled in analyzer-only mode."
+        ],
+        "round": 2
+      },
+      {
+        "enabled": true,
+        "measurement_mode": "autofoh_analyzers",
+        "measurement_channels": {
+          "1": {
+            "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "kick",
+            "source_role": "kick",
+            "stem_roles": [
+              "KICK",
+              "DRUMS"
+            ],
+            "priority": 0.72,
+            "analysis_mode": "windowed_full_track_fallback",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": -20.29,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "2": {
+            "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "snare",
+            "source_role": "snare",
+            "stem_roles": [
+              "SNARE",
+              "DRUMS"
+            ],
+            "priority": 0.7,
+            "analysis_mode": "windowed_full_track_fallback",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": -15.64,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "3": {
+            "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "hi_hat",
+            "source_role": "hihat",
+            "stem_roles": [
+              "CYMBALS",
+              "DRUMS"
+            ],
+            "priority": 0.58,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 2.56,
+            "analysis_active_ratio": 0.0971,
+            "analysis_threshold_db": -31.05,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "4": {
+            "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "custom",
+            "source_role": "unknown",
+            "stem_roles": [
+              "UNKNOWN"
+            ],
+            "priority": 0.0,
+            "analysis_mode": "windowed_full_track",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": null,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "5": {
+            "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "custom",
+            "source_role": "unknown",
+            "stem_roles": [
+              "UNKNOWN"
+            ],
+            "priority": 0.0,
+            "analysis_mode": "windowed_full_track",
+            "analysis_active_sec": 18.0,
+            "analysis_active_ratio": 0.6829,
+            "analysis_threshold_db": null,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "6": {
+            "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 1.115,
+            "analysis_active_ratio": 0.0423,
+            "analysis_threshold_db": -26.45,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "7": {
+            "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 0.575,
+            "analysis_active_ratio": 0.0218,
+            "analysis_threshold_db": -26.14,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          },
+          "8": {
+            "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+            "instrument": "rack_tom",
+            "source_role": "tom",
+            "stem_roles": [
+              "TOMS",
+              "DRUMS"
+            ],
+            "priority": 0.68,
+            "analysis_mode": "event_based",
+            "analysis_active_sec": 1.305,
+            "analysis_active_ratio": 0.0495,
+            "analysis_threshold_db": -25.91,
+            "measurement_block_sec": 0.0929,
+            "measurement_block_samples": 4096
+          }
+        },
+        "master_indexes": {
+          "SubIndex": -14.042,
+          "BassIndex": 0.334,
+          "BodyIndex": -2.343,
+          "MudIndex": -9.211,
+          "PresenceIndex": 7.514,
+          "HarshnessIndex": 10.685,
+          "SibilanceIndex": 13.924,
+          "AirIndex": 14.477
+        },
+        "detected_problems": [
+          {
+            "label": "harshness_excess",
+            "problem": {
+              "problem_type": "harshness_excess",
+              "description": "Sustained 3-6 kHz excess is making the mix harsh",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "HARSHNESS",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.67,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            },
+            "candidate_actions": [
+              {
+                "action_type": "ChannelEQMove",
+                "reason": "harshness_excess cleanup on UNKNOWN",
+                "channel_id": 5,
+                "band": 3,
+                "freq_hz": 4200.0,
+                "gain_db": -1.0,
+                "q": 1.8
+              }
+            ]
+          },
+          {
+            "label": "sibilance_excess",
+            "problem": {
+              "problem_type": "sibilance_excess",
+              "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.365,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            },
+            "candidate_actions": [
+              {
+                "action_type": "ChannelEQMove",
+                "reason": "sibilance_excess cleanup on UNKNOWN",
+                "channel_id": 5,
+                "band": 4,
+                "freq_hz": 7500.0,
+                "gain_db": -1.0,
+                "q": 2.0
+              }
+            ]
+          },
+          {
+            "label": "cymbal_buildup",
+            "problem": {
+              "problem_type": "cymbal_buildup",
+              "description": "Measured direct cymbal energy is dominating the upper bands",
+              "channel_id": 3,
+              "stem": "DRUMS",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 82.44360934827654,
+              "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 1.0,
+                "action_confidence": 0.82,
+                "risk_score": 0.22
+              }
+            },
+            "candidate_actions": [
+              {
+                "action_type": "ChannelFaderMove",
+                "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+                "channel_id": 3,
+                "target_db": -4.25,
+                "delta_db": -2.25,
+                "is_lead": false
+              }
+            ]
+          }
+        ],
+        "applied_actions": [
+          {
+            "label": "harshness_excess",
+            "requested_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "harshness_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 3,
+              "freq_hz": 4200.0,
+              "gain_db": -1.0,
+              "q": 1.8
+            },
+            "applied_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "harshness_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 3,
+              "freq_hz": 4200.0,
+              "gain_db": -1.0,
+              "q": 1.8
+            },
+            "sent": true,
+            "bounded": false,
+            "allowed": true,
+            "supported": true,
+            "message": "sent",
+            "problem": {
+              "problem_type": "harshness_excess",
+              "description": "Sustained 3-6 kHz excess is making the mix harsh",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "HARSHNESS",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.67,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            }
+          },
+          {
+            "label": "sibilance_excess",
+            "requested_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "sibilance_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 4,
+              "freq_hz": 7500.0,
+              "gain_db": -1.0,
+              "q": 2.0
+            },
+            "applied_action": {
+              "action_type": "ChannelEQMove",
+              "reason": "sibilance_excess cleanup on UNKNOWN",
+              "channel_id": 5,
+              "band": 4,
+              "freq_hz": 7500.0,
+              "gain_db": -1.0,
+              "q": 2.0
+            },
+            "sent": true,
+            "bounded": false,
+            "allowed": true,
+            "supported": true,
+            "message": "sent",
+            "problem": {
+              "problem_type": "sibilance_excess",
+              "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+              "channel_id": 5,
+              "stem": "UNKNOWN",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 1.0,
+              "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 0.365,
+                "action_confidence": 0.9,
+                "risk_score": 0.35
+              }
+            }
+          },
+          {
+            "label": "cymbal_buildup",
+            "requested_action": {
+              "action_type": "ChannelFaderMove",
+              "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+              "channel_id": 3,
+              "target_db": -4.25,
+              "delta_db": -2.25,
+              "is_lead": false
+            },
+            "applied_action": {
+              "action_type": "ChannelFaderMove",
+              "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+              "channel_id": 3,
+              "target_db": -3.0,
+              "delta_db": -1.0,
+              "is_lead": false
+            },
+            "sent": true,
+            "bounded": true,
+            "allowed": true,
+            "supported": true,
+            "message": "sent",
+            "problem": {
+              "problem_type": "cymbal_buildup",
+              "description": "Measured direct cymbal energy is dominating the upper bands",
+              "channel_id": 3,
+              "stem": "DRUMS",
+              "band_name": "SIBILANCE",
+              "persistence_sec": 82.44360934827654,
+              "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+              "confidence_risk": {
+                "problem_confidence": 1.0,
+                "culprit_confidence": 1.0,
+                "action_confidence": 0.82,
+                "risk_score": 0.22
+              }
+            }
+          }
+        ],
+        "virtual_console_calls": [
+          {
+            "cmd": "set_eq_band",
+            "channel": 5,
+            "band": 3,
+            "before": [
+              4200.0,
+              -1.0,
+              1.8
+            ],
+            "after": [
+              4200.0,
+              -1.0,
+              1.8
+            ]
+          },
+          {
+            "cmd": "set_eq_band",
+            "channel": 5,
+            "band": 4,
+            "before": [
+              7500.0,
+              -1.0,
+              2.0
+            ],
+            "after": [
+              7500.0,
+              -1.0,
+              2.0
+            ]
+          },
+          {
+            "cmd": "set_fader",
+            "channel": 3,
+            "before_db": -2.0,
+            "after_db": -3.0
+          }
+        ],
+        "notes": [
+          "All additional offline correction moves in this pass come from measured AutoFOH detector outputs.",
+          "Lead handoff and cymbal buildup decisions are derived from the same measured analyzer snapshot.",
+          "Legacy codex heuristic correction layers are disabled in analyzer-only mode."
+        ],
+        "round": 3
+      }
+    ]
+  },
+  "codex_corrections": {
+    "enabled": false,
+    "actions": [],
+    "requested": false,
+    "notes": []
+  },
+  "codex_bleed_control": {
+    "enabled": false,
+    "requested": false,
+    "notes": []
+  },
+  "event_based_dynamics": {
+    "enabled": true,
+    "changes": [
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "analysis_active_ratio": 0.0941,
+        "analysis_threshold_db": -24.12,
+        "range_db": 5.0,
+        "open_ms": 14.0,
+        "close_ms": 160.0,
+        "hold_ms": 180.0,
+        "reason": "Event-based activity windows drive a soft expander so bleed between hits or phrases does not keep the channel artificially open."
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "analysis_active_ratio": 0.0383,
+        "analysis_threshold_db": -18.5,
+        "range_db": 12.0,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "reason": "Event-based activity windows drive a soft expander so bleed between hits or phrases does not keep the channel artificially open."
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "analysis_active_ratio": 0.0205,
+        "analysis_threshold_db": -16.02,
+        "range_db": 12.0,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "reason": "Event-based activity windows drive a soft expander so bleed between hits or phrases does not keep the channel artificially open."
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "analysis_active_ratio": 0.0482,
+        "analysis_threshold_db": -16.94,
+        "range_db": 12.0,
+        "open_ms": 10.0,
+        "close_ms": 110.0,
+        "hold_ms": 130.0,
+        "reason": "Event-based activity windows drive a soft expander so bleed between hits or phrases does not keep the channel artificially open."
+      }
+    ],
+    "notes": [
+      "Lead and backing vocals get a gentle downward expander between phrases.",
+      "Rack and floor toms get a stronger event-based expander between hits.",
+      "Kick, snare, and cymbal spot mics also use event-based expansion when bleed would otherwise keep them open.",
+      "Ambient microphones such as overheads and rooms stay ungated."
+    ]
+  },
+  "fx": {
+    "enabled": true,
+    "tempo_bpm": 120.0,
+    "plan": {
+      "buses": [
+        {
+          "bus_id": 13,
+          "name": "Vocal Plate",
+          "fx_type": "reverb",
+          "fx_slot": "FX1",
+          "model": "PLATE",
+          "return_level_db": -5.998285714285714,
+          "params": {
+            "decay_s": 1.209,
+            "predelay_ms": 39.346607999999996,
+            "density": 0.72,
+            "brightness": 0.5051531428571427
+          },
+          "hpf_hz": 220.0,
+          "lpf_hz": 7254.165,
+          "duck_source": "lead_vocal",
+          "duck_depth_db": 2.4994285714285716,
+          "reason": "Lead vocal needs depth while dry vocal remains forward."
+        },
+        {
+          "bus_id": 14,
+          "name": "Drum Room",
+          "fx_type": "reverb",
+          "fx_slot": "FX2",
+          "model": "ROOM",
+          "return_level_db": -5.998285714285714,
+          "params": {
+            "decay_s": 0.5616,
+            "predelay_ms": 9.36824,
+            "density": 0.86,
+            "brightness": 0.3451531428571428
+          },
+          "hpf_hz": 180.0,
+          "lpf_hz": 5054.165,
+          "duck_source": null,
+          "duck_depth_db": 0.6994285714285715,
+          "reason": "Short dense drum space supports snare/toms without washing overheads."
+        },
+        {
+          "bus_id": 15,
+          "name": "Tempo Delay",
+          "fx_type": "delay",
+          "fx_slot": "FX3",
+          "model": "STEREO_DELAY",
+          "return_level_db": -3.8974285714285717,
+          "params": {
+            "left_delay_ms": 375.0,
+            "right_delay_ms": 500.0,
+            "feedback": 0.1716,
+            "width": 0.4972925
+          },
+          "hpf_hz": 260.0,
+          "lpf_hz": 4597.937857142857,
+          "duck_source": "lead_vocal",
+          "duck_depth_db": 5.598857142857144,
+          "reason": "Tempo delay is audible in vocal gaps, not over lyric consonants."
+        },
+        {
+          "bus_id": 16,
+          "name": "Mod Doubler",
+          "fx_type": "chorus",
+          "fx_slot": "FX4",
+          "model": "CHORUS",
+          "return_level_db": -17.994285714285716,
+          "params": {
+            "left_delay_ms": 10.023376,
+            "right_delay_ms": 15.490672,
+            "depth": 0.0772944,
+            "rate_hz": 0.45
+          },
+          "hpf_hz": 220.0,
+          "lpf_hz": 7639.0771428571425,
+          "duck_source": null,
+          "duck_depth_db": 0.0,
+          "reason": "Subtle stereo modulation widens backing parts without moving the lead center."
+        }
+      ],
+      "sends": [
+        {
+          "channel_id": 2,
+          "instrument": "snare",
+          "bus_id": 14,
+          "send_db": -19.891064285714286,
+          "post_fader": true,
+          "reason": "short drum room/plate support"
+        },
+        {
+          "channel_id": 3,
+          "instrument": "hi_hat",
+          "bus_id": 14,
+          "send_db": -27.741064285714288,
+          "post_fader": true,
+          "reason": "very low room only to avoid harsh wash"
+        },
+        {
+          "channel_id": 6,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -21.968339285714286,
+          "post_fader": true,
+          "reason": "tom depth follows drum room"
+        },
+        {
+          "channel_id": 7,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -21.968339285714286,
+          "post_fader": true,
+          "reason": "tom depth follows drum room"
+        },
+        {
+          "channel_id": 8,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -21.968339285714286,
+          "post_fader": true,
+          "reason": "tom depth follows drum room"
+        }
+      ],
+      "notes": [
+        "Shared stereo FX returns; no per-channel insert reverbs by default.",
+        "FX sends are post-fader so agent balance moves preserve wet/dry ratio.",
+        "Returns are filtered to keep low end clear and vocal presence readable.",
+        "Vocal plate and tempo delay are ducked from lead vocal activity."
+      ]
+    },
+    "returns": [
+      {
+        "bus_id": 14,
+        "name": "Drum Room",
+        "fx_type": "reverb",
+        "fx_slot": "FX2",
+        "model": "ROOM",
+        "return_level_db": -5.998285714285714,
+        "params": {
+          "decay_s": 0.5616,
+          "predelay_ms": 9.36824,
+          "density": 0.86,
+          "brightness": 0.3451531428571428
+        },
+        "hpf_hz": 180.0,
+        "lpf_hz": 5054.165,
+        "duck_source": null,
+        "duck_depth_db": 0.6994285714285715,
+        "reason": "Short dense drum space supports snare/toms without washing overheads.",
+        "active_send_count": 5,
+        "return_peak_dbfs": -33.85
+      }
+    ],
+    "sends_by_bus": {
+      "13": [],
+      "14": [
+        {
+          "channel_id": 2,
+          "instrument": "snare",
+          "bus_id": 14,
+          "send_db": -19.891064285714286,
+          "post_fader": true,
+          "reason": "short drum room/plate support",
+          "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav"
+        },
+        {
+          "channel_id": 3,
+          "instrument": "hi_hat",
+          "bus_id": 14,
+          "send_db": -27.741064285714288,
+          "post_fader": true,
+          "reason": "very low room only to avoid harsh wash",
+          "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav"
+        },
+        {
+          "channel_id": 6,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -21.968339285714286,
+          "post_fader": true,
+          "reason": "tom depth follows drum room",
+          "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav"
+        },
+        {
+          "channel_id": 7,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -21.968339285714286,
+          "post_fader": true,
+          "reason": "tom depth follows drum room",
+          "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav"
+        },
+        {
+          "channel_id": 8,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "send_db": -21.968339285714286,
+          "post_fader": true,
+          "reason": "tom depth follows drum room",
+          "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav"
+        }
+      ],
+      "15": [],
+      "16": []
+    },
+    "reference_send_overrides": [
+      {
+        "channel": 2,
+        "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "snare",
+        "before_db": -18.0,
+        "target_db": -21.44,
+        "after_db": -19.89
+      },
+      {
+        "channel": 3,
+        "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "hi_hat",
+        "before_db": -33.0,
+        "target_db": -23.44,
+        "after_db": -27.74
+      },
+      {
+        "channel": 6,
+        "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "before_db": -20.0,
+        "target_db": -23.58,
+        "after_db": -21.97
+      },
+      {
+        "channel": 7,
+        "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "before_db": -20.0,
+        "target_db": -23.58,
+        "after_db": -21.97
+      },
+      {
+        "channel": 8,
+        "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+        "instrument": "rack_tom",
+        "before_db": -20.0,
+        "target_db": -23.58,
+        "after_db": -21.97
+      }
+    ],
+    "reference_fx_overrides": {
+      "enabled": true,
+      "bus_adjustments": [
+        {
+          "bus_id": 13,
+          "name": "Vocal Plate",
+          "fx_type": "reverb",
+          "return_before_db": -4.0,
+          "return_after_db": -6.0,
+          "decay_after_s": 1.209,
+          "brightness_after": 0.505,
+          "lpf_after_hz": 7254.2
+        },
+        {
+          "bus_id": 14,
+          "name": "Drum Room",
+          "fx_type": "reverb",
+          "return_before_db": -4.0,
+          "return_after_db": -6.0,
+          "decay_after_s": 0.562,
+          "brightness_after": 0.345,
+          "lpf_after_hz": 5054.2
+        },
+        {
+          "bus_id": 15,
+          "name": "Tempo Delay",
+          "fx_type": "delay",
+          "return_before_db": -0.5,
+          "return_after_db": -3.9,
+          "feedback_after": 0.172,
+          "width_after": 0.497,
+          "lpf_after_hz": 4597.9
+        },
+        {
+          "bus_id": 16,
+          "name": "Mod Doubler",
+          "fx_type": "chorus",
+          "return_before_db": -11.0,
+          "return_after_db": -17.99,
+          "depth_after": 0.077,
+          "lpf_after_hz": 7639.1
+        }
+      ],
+      "send_adjustments": [
+        {
+          "channel": 2,
+          "instrument": "snare",
+          "bus_id": 14,
+          "before_db": -17.0,
+          "after_db": -18.0
+        },
+        {
+          "channel": 3,
+          "instrument": "hi_hat",
+          "bus_id": 14,
+          "before_db": -32.0,
+          "after_db": -33.0
+        },
+        {
+          "channel": 6,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "before_db": -19.0,
+          "after_db": -20.0
+        },
+        {
+          "channel": 7,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "before_db": -19.0,
+          "after_db": -20.0
+        },
+        {
+          "channel": 8,
+          "instrument": "rack_tom",
+          "bus_id": 14,
+          "before_db": -19.0,
+          "after_db": -20.0
+        }
+      ],
+      "style_summary": {
+        "stereo_width": 0.14,
+        "dynamic_range_db": 19.829,
+        "narrowness": 0.499,
+        "tightness": 0.0,
+        "darkness": 0.218
+      }
+    }
+  },
+  "master_processing": {
+    "final_limiter": true,
+    "soft_limiter": true,
+    "ceiling_dbfs": -1.0,
+    "pre_master_peak_dbfs": 3.81,
+    "pre_master_lufs": -16.89,
+    "post_master_lufs": -15.8,
+    "reference_mastering": {
+      "requested": true,
+      "enabled": true,
+      "reference_path": "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/reference_style_set",
+      "source_type": "audio_directory",
+      "reference_sources": [
+        "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/dry_mix_066_phrase_rock_complex_fast_sticks_DMC.wav",
+        "/Users/dmitrijvolkov/AUTO-MIXER-Tubeslave-main/external/automix-toolkit/drums-test-rock/mix/dry_mix_066_phrase_rock_complex_fast_sticks_MixWaveUNet.wav"
+      ],
+      "backend": "reference_audio_fallback",
+      "peak_dbfs": -0.72,
+      "lufs": -15.8,
+      "pre_target_conform_lufs": -17.34,
+      "target_lufs": -15.8
+    }
+  },
+  "live_channel_headroom": {
+    "enabled": false
+  },
+  "phase_alignment": [],
+  "drum_pan_rule": {
+    "enabled": false,
+    "reason": "overhead_pair_not_found"
+  },
+  "agent_actions": [
+    {
+      "type": "adjust_gain",
+      "channel": 1,
+      "parameters": {
+        "channel": 1,
+        "target_peak_db": -8.0,
+        "adjustment_db": -3.0
+      },
+      "confidence": 0.85,
+      "reason": "Peak level at 3.8dB (target: -8.0dB)",
+      "source": "rule_engine",
+      "timestamp": 1776853705.9008,
+      "risk": "medium",
+      "expected_effect": "",
+      "rollback_hint": ""
+    },
+    {
+      "type": "reduce_gain",
+      "channel": 1,
+      "parameters": {
+        "channel": 1,
+        "amount_db": -3.0
+      },
+      "confidence": 1.0,
+      "reason": "True peak at 3.8dBTP exceeds -0.5dBTP limit",
+      "source": "rule_engine",
+      "timestamp": 1776853705.9008,
+      "risk": "medium",
+      "expected_effect": "",
+      "rollback_hint": ""
+    }
+  ],
+  "agent_audit": [
+    {
+      "timestamp": 1776853705.902572,
+      "status": "applied",
+      "detail": "Applied to mixer",
+      "type": "adjust_gain",
+      "channel": 1,
+      "parameters": {
+        "channel": 1,
+        "target_peak_db": -8.0,
+        "adjustment_db": -3.0
+      },
+      "confidence": 0.85,
+      "reason": "Peak level at 3.8dB (target: -8.0dB)",
+      "source": "rule_engine",
+      "risk": "medium"
+    },
+    {
+      "timestamp": 1776853705.902554,
+      "status": "applied",
+      "detail": "Applied to mixer",
+      "type": "reduce_gain",
+      "channel": 1,
+      "parameters": {
+        "channel": 1,
+        "amount_db": -3.0
+      },
+      "confidence": 1.0,
+      "reason": "True peak at 3.8dBTP exceeds -0.5dBTP limit",
+      "source": "rule_engine",
+      "risk": "medium"
+    }
+  ],
+  "virtual_console_calls": [
+    {
+      "cmd": "set_fader",
+      "channel": 1,
+      "value_db": -3.0
+    },
+    {
+      "cmd": "set_fader",
+      "channel": 1,
+      "value_db": -6.0
+    }
+  ],
+  "channels": [
+    {
+      "channel": 1,
+      "file": "01_kick_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "kick",
+      "trim_db": 8.61,
+      "agent_fader_db": -4.51,
+      "pan": 0.0,
+      "hpf": 35.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -23.5,
+        "ratio": 5.4,
+        "attack_ms": 10.0,
+        "release_ms": 90.0
+      },
+      "event_expander": {
+        "enabled": false,
+        "reason": "no_event_ranges_detected"
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "autofoh_actions": [],
+      "cross_adaptive_eq": [],
+      "peak_db": -4.85,
+      "rms_db": -28.61,
+      "analysis_mode": "windowed_full_track_fallback",
+      "analysis_active_sec": 18.0,
+      "analysis_active_ratio": 0.6829,
+      "analysis_threshold_db": -20.81
+    },
+    {
+      "channel": 2,
+      "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "snare",
+      "trim_db": -2.09,
+      "agent_fader_db": 0.0,
+      "pan": 0.0,
+      "hpf": 110.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -23.0,
+        "ratio": 4.0,
+        "attack_ms": 8,
+        "release_ms": 130
+      },
+      "event_expander": {
+        "enabled": false,
+        "reason": "no_event_ranges_detected"
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "autofoh_actions": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 2,
+          "file": "02_snare_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "snare",
+          "priority": 3,
+          "frequency_hz": 120.0,
+          "band": "bass",
+          "gain_db": -0.36,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": 0.0,
+      "rms_db": -20.91,
+      "analysis_mode": "windowed_full_track_fallback",
+      "analysis_active_sec": 18.0,
+      "analysis_active_ratio": 0.6829,
+      "analysis_threshold_db": -10.89
+    },
+    {
+      "channel": 3,
+      "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "hi_hat",
+      "trim_db": -4.99,
+      "agent_fader_db": -3.41,
+      "pan": 0.13261920000000002,
+      "hpf": 180.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -18,
+        "ratio": 1.8,
+        "attack_ms": 18,
+        "release_ms": 180
+      },
+      "event_expander": {
+        "enabled": true,
+        "mode": "event_based_expander",
+        "range_db": 5.0,
+        "threshold_db": -24.12,
+        "open_ms": 14.0,
+        "close_ms": 160.0,
+        "hold_ms": 180.0,
+        "active_ratio": 0.1463,
+        "active_sec": 3.84,
+        "max_reduction_db": 5.0,
+        "mean_reduction_inactive_db": 4.84,
+        "mean_reduction_active_db": 0.01
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "autofoh_actions": [
+        {
+          "label": "cymbal_buildup",
+          "requested_action": {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -2.25,
+            "delta_db": -2.25,
+            "is_lead": false
+          },
+          "applied_action": {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -1.0,
+            "delta_db": -1.0,
+            "is_lead": false
+          },
+          "sent": true,
+          "bounded": true,
+          "allowed": true,
+          "supported": true,
+          "message": "sent",
+          "problem": {
+            "problem_type": "cymbal_buildup",
+            "description": "Measured direct cymbal energy is dominating the upper bands",
+            "channel_id": 3,
+            "stem": "DRUMS",
+            "band_name": "SIBILANCE",
+            "persistence_sec": 82.44361132616203,
+            "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+            "confidence_risk": {
+              "problem_confidence": 1.0,
+              "culprit_confidence": 1.0,
+              "action_confidence": 0.82,
+              "risk_score": 0.22
+            }
+          }
+        },
+        {
+          "label": "cymbal_buildup",
+          "requested_action": {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -3.25,
+            "delta_db": -2.25,
+            "is_lead": false
+          },
+          "applied_action": {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -2.0,
+            "delta_db": -1.0,
+            "is_lead": false
+          },
+          "sent": true,
+          "bounded": true,
+          "allowed": true,
+          "supported": true,
+          "message": "sent",
+          "problem": {
+            "problem_type": "cymbal_buildup",
+            "description": "Measured direct cymbal energy is dominating the upper bands",
+            "channel_id": 3,
+            "stem": "DRUMS",
+            "band_name": "SIBILANCE",
+            "persistence_sec": 82.44361025107825,
+            "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+            "confidence_risk": {
+              "problem_confidence": 1.0,
+              "culprit_confidence": 1.0,
+              "action_confidence": 0.82,
+              "risk_score": 0.22
+            }
+          }
+        },
+        {
+          "label": "cymbal_buildup",
+          "requested_action": {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -4.25,
+            "delta_db": -2.25,
+            "is_lead": false
+          },
+          "applied_action": {
+            "action_type": "ChannelFaderMove",
+            "reason": "Measured cymbal buildup on 03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+            "channel_id": 3,
+            "target_db": -3.0,
+            "delta_db": -1.0,
+            "is_lead": false
+          },
+          "sent": true,
+          "bounded": true,
+          "allowed": true,
+          "supported": true,
+          "message": "sent",
+          "problem": {
+            "problem_type": "cymbal_buildup",
+            "description": "Measured direct cymbal energy is dominating the upper bands",
+            "channel_id": 3,
+            "stem": "DRUMS",
+            "band_name": "SIBILANCE",
+            "persistence_sec": 82.44360934827654,
+            "expected_effect": "Reduce direct cymbal dominance while preserving the drum image.",
+            "confidence_risk": {
+              "problem_confidence": 1.0,
+              "culprit_confidence": 1.0,
+              "action_confidence": 0.82,
+              "risk_score": 0.22
+            }
+          }
+        }
+      ],
+      "cross_adaptive_eq": [
+        {
+          "channel": 3,
+          "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "hi_hat",
+          "priority": 5,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -2.5,
+          "q": 4.0,
+          "source_count": 3
+        },
+        {
+          "channel": 3,
+          "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "hi_hat",
+          "priority": 5,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -1.58,
+          "q": 4.0,
+          "source_count": 2
+        },
+        {
+          "channel": 3,
+          "file": "03_hi-hat_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "hi_hat",
+          "priority": 5,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": -0.98,
+      "rms_db": -23.01,
+      "analysis_mode": "event_based",
+      "analysis_active_sec": 2.48,
+      "analysis_active_ratio": 0.0941,
+      "analysis_threshold_db": -24.12
+    },
+    {
+      "channel": 4,
+      "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "custom",
+      "trim_db": -5.94,
+      "agent_fader_db": -0.87,
+      "pan": 0.0661248,
+      "hpf": 80.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -19.76,
+        "ratio": 2.01,
+        "attack_ms": 10,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": false
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "autofoh_actions": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 4,
+          "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 4,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 4,
+          "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 4,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 4,
+          "file": "04_overhead_L_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 4,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": 0.0,
+      "rms_db": -18.06,
+      "analysis_mode": "windowed_full_track",
+      "analysis_active_sec": 18.0,
+      "analysis_active_ratio": 0.6829,
+      "analysis_threshold_db": null
+    },
+    {
+      "channel": 5,
+      "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "custom",
+      "trim_db": 6.27,
+      "agent_fader_db": 0.0,
+      "pan": 0.0661248,
+      "hpf": 80.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -19.76,
+        "ratio": 2.01,
+        "attack_ms": 10,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": false
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "autofoh_actions": [
+        {
+          "label": "harshness_excess",
+          "requested_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          },
+          "applied_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          },
+          "sent": true,
+          "bounded": false,
+          "allowed": true,
+          "supported": true,
+          "message": "sent",
+          "problem": {
+            "problem_type": "harshness_excess",
+            "description": "Sustained 3-6 kHz excess is making the mix harsh",
+            "channel_id": 5,
+            "stem": "UNKNOWN",
+            "band_name": "HARSHNESS",
+            "persistence_sec": 1.0,
+            "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+            "confidence_risk": {
+              "problem_confidence": 1.0,
+              "culprit_confidence": 0.679,
+              "action_confidence": 0.9,
+              "risk_score": 0.35
+            }
+          }
+        },
+        {
+          "label": "harshness_excess",
+          "requested_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          },
+          "applied_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          },
+          "sent": true,
+          "bounded": false,
+          "allowed": true,
+          "supported": true,
+          "message": "sent",
+          "problem": {
+            "problem_type": "harshness_excess",
+            "description": "Sustained 3-6 kHz excess is making the mix harsh",
+            "channel_id": 5,
+            "stem": "UNKNOWN",
+            "band_name": "HARSHNESS",
+            "persistence_sec": 1.0,
+            "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+            "confidence_risk": {
+              "problem_confidence": 1.0,
+              "culprit_confidence": 0.656,
+              "action_confidence": 0.9,
+              "risk_score": 0.35
+            }
+          }
+        },
+        {
+          "label": "sibilance_excess",
+          "requested_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "sibilance_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 4,
+            "freq_hz": 7500.0,
+            "gain_db": -1.0,
+            "q": 2.0
+          },
+          "applied_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "sibilance_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 4,
+            "freq_hz": 7500.0,
+            "gain_db": -1.0,
+            "q": 2.0
+          },
+          "sent": true,
+          "bounded": false,
+          "allowed": true,
+          "supported": true,
+          "message": "sent",
+          "problem": {
+            "problem_type": "sibilance_excess",
+            "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+            "channel_id": 5,
+            "stem": "UNKNOWN",
+            "band_name": "SIBILANCE",
+            "persistence_sec": 1.0,
+            "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+            "confidence_risk": {
+              "problem_confidence": 1.0,
+              "culprit_confidence": 0.383,
+              "action_confidence": 0.9,
+              "risk_score": 0.35
+            }
+          }
+        },
+        {
+          "label": "harshness_excess",
+          "requested_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          },
+          "applied_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "harshness_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 3,
+            "freq_hz": 4200.0,
+            "gain_db": -1.0,
+            "q": 1.8
+          },
+          "sent": true,
+          "bounded": false,
+          "allowed": true,
+          "supported": true,
+          "message": "sent",
+          "problem": {
+            "problem_type": "harshness_excess",
+            "description": "Sustained 3-6 kHz excess is making the mix harsh",
+            "channel_id": 5,
+            "stem": "UNKNOWN",
+            "band_name": "HARSHNESS",
+            "persistence_sec": 1.0,
+            "expected_effect": "Reduce sustained harshness excess from the main culprit stem",
+            "confidence_risk": {
+              "problem_confidence": 1.0,
+              "culprit_confidence": 0.67,
+              "action_confidence": 0.9,
+              "risk_score": 0.35
+            }
+          }
+        },
+        {
+          "label": "sibilance_excess",
+          "requested_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "sibilance_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 4,
+            "freq_hz": 7500.0,
+            "gain_db": -1.0,
+            "q": 2.0
+          },
+          "applied_action": {
+            "action_type": "ChannelEQMove",
+            "reason": "sibilance_excess cleanup on UNKNOWN",
+            "channel_id": 5,
+            "band": 4,
+            "freq_hz": 7500.0,
+            "gain_db": -1.0,
+            "q": 2.0
+          },
+          "sent": true,
+          "bounded": false,
+          "allowed": true,
+          "supported": true,
+          "message": "sent",
+          "problem": {
+            "problem_type": "sibilance_excess",
+            "description": "Sustained 6-10 kHz excess is causing sibilance or cymbal bite",
+            "channel_id": 5,
+            "stem": "UNKNOWN",
+            "band_name": "SIBILANCE",
+            "persistence_sec": 1.0,
+            "expected_effect": "Reduce sustained sibilance excess from the main culprit stem",
+            "confidence_risk": {
+              "problem_confidence": 1.0,
+              "culprit_confidence": 0.365,
+              "action_confidence": 0.9,
+              "risk_score": 0.35
+            }
+          }
+        }
+      ],
+      "cross_adaptive_eq": [
+        {
+          "channel": 5,
+          "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 4,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 5,
+          "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 4,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 5,
+          "file": "05_overhead_R_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "custom",
+          "priority": 4,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": -7.24,
+      "rms_db": -30.27,
+      "analysis_mode": "windowed_full_track",
+      "analysis_active_sec": 18.0,
+      "analysis_active_ratio": 0.6829,
+      "analysis_threshold_db": null
+    },
+    {
+      "channel": 6,
+      "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "rack_tom",
+      "trim_db": -5.49,
+      "agent_fader_db": -0.42,
+      "pan": -0.2,
+      "hpf": 65.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -21.36,
+        "ratio": 2.89,
+        "attack_ms": 12,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": true,
+        "mode": "event_based_expander",
+        "range_db": 12.0,
+        "threshold_db": -18.5,
+        "open_ms": 8.0,
+        "close_ms": 120.0,
+        "hold_ms": 130.0,
+        "active_ratio": 0.0587,
+        "active_sec": 1.54,
+        "max_reduction_db": 12.0,
+        "mean_reduction_inactive_db": 11.85,
+        "mean_reduction_active_db": 0.01
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "autofoh_actions": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 6,
+          "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 6,
+          "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 6,
+          "file": "06_tom_1_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 120.0,
+          "band": "bass",
+          "gain_db": -1.8,
+          "q": 4.0,
+          "source_count": 3
+        }
+      ],
+      "peak_db": -4.3,
+      "rms_db": -19.51,
+      "analysis_mode": "event_based",
+      "analysis_active_sec": 1.01,
+      "analysis_active_ratio": 0.0383,
+      "analysis_threshold_db": -18.5
+    },
+    {
+      "channel": 7,
+      "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "rack_tom",
+      "trim_db": -9.1,
+      "agent_fader_db": -0.96,
+      "pan": -0.2,
+      "hpf": 65.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -21.36,
+        "ratio": 2.89,
+        "attack_ms": 12,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": true,
+        "mode": "event_based_expander",
+        "range_db": 12.0,
+        "threshold_db": -16.02,
+        "open_ms": 8.0,
+        "close_ms": 120.0,
+        "hold_ms": 130.0,
+        "active_ratio": 0.0307,
+        "active_sec": 0.805,
+        "max_reduction_db": 12.0,
+        "mean_reduction_inactive_db": 11.9,
+        "mean_reduction_active_db": 0.01
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "autofoh_actions": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 7,
+          "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 7,
+          "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 7,
+          "file": "07_tom_2_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 3000.0,
+          "band": "high_mid",
+          "gain_db": -0.48,
+          "q": 4.0,
+          "source_count": 1
+        }
+      ],
+      "peak_db": -0.51,
+      "rms_db": -15.9,
+      "analysis_mode": "event_based",
+      "analysis_active_sec": 0.54,
+      "analysis_active_ratio": 0.0205,
+      "analysis_threshold_db": -16.02
+    },
+    {
+      "channel": 8,
+      "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+      "instrument": "rack_tom",
+      "trim_db": -6.95,
+      "agent_fader_db": -0.63,
+      "pan": -0.2,
+      "hpf": 65.0,
+      "lpf": 0.0,
+      "phase_invert": false,
+      "delay_ms": 0.0,
+      "input_fade_ms": 0.0,
+      "compressor": {
+        "threshold_db": -21.36,
+        "ratio": 2.89,
+        "attack_ms": 12,
+        "release_ms": 150
+      },
+      "event_expander": {
+        "enabled": true,
+        "mode": "event_based_expander",
+        "range_db": 12.0,
+        "threshold_db": -16.94,
+        "open_ms": 8.0,
+        "close_ms": 120.0,
+        "hold_ms": 130.0,
+        "active_ratio": 0.0707,
+        "active_sec": 1.854,
+        "max_reduction_db": 12.0,
+        "mean_reduction_inactive_db": 11.85,
+        "mean_reduction_active_db": 0.01
+      },
+      "phase_notes": [],
+      "pan_notes": [],
+      "autofoh_actions": [],
+      "cross_adaptive_eq": [
+        {
+          "channel": 8,
+          "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 1250.0,
+          "band": "mid",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 8,
+          "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 6000.0,
+          "band": "high",
+          "gain_db": -0.9,
+          "q": 4.0,
+          "source_count": 1
+        },
+        {
+          "channel": 8,
+          "file": "08_tom_3_066_phrase_rock_complex_fast_sticks.wav",
+          "instrument": "rack_tom",
+          "priority": 5,
+          "frequency_hz": 40.0,
+          "band": "sub",
+          "gain_db": -1.42,
+          "q": 4.0,
+          "source_count": 3
+        }
+      ],
+      "peak_db": -0.37,
+      "rms_db": -18.05,
+      "analysis_mode": "event_based",
+      "analysis_active_sec": 1.27,
+      "analysis_active_ratio": 0.0482,
+      "analysis_threshold_db": -16.94
+    }
+  ]
+}
