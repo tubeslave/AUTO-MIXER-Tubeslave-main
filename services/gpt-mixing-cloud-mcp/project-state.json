@@ -1,0 +1,12 @@
+{
+  "projectId": "premiere",
+  "projectName": "Премьера",
+  "reference": "Heart Attack Man — Leap Year",
+  "mcpConnected": true,
+  "readiness": 0,
+  "selectedAction": "analyze",
+  "scope": "all",
+  "instruction": "",
+  "version": "v0.5",
+  "status": "ready"
+}
