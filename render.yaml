@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: gpt-mixing-oblako-mcp
+    runtime: docker
+    plan: free
+    region: frankfurt
+    rootDir: services/gpt-mixing-cloud-mcp
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: MAX_AUDIO_BYTES
+        value: "536870912"
