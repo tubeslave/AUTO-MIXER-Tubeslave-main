@@ -1,0 +1,1 @@
+Render Node runtime uses ffmpeg-static and ffprobe-static so Docker is not required.
