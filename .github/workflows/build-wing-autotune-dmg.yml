@@ -1,0 +1,49 @@
+name: Build WING AutoTune DMG
+on:
+  push:
+    branches: [wing-autotune-mac-dmg]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        working-directory: wing-autotune-mac
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Build app
+        working-directory: wing-autotune-mac
+        run: |
+          pyinstaller --clean --noconfirm --windowed --name "WING AutoTune" \
+            --hidden-import scipy.signal \
+            --hidden-import sounddevice \
+            --hidden-import pythonosc.udp_client \
+            app.py
+          PLIST="dist/WING AutoTune.app/Contents/Info.plist"
+          /usr/libexec/PlistBuddy -c "Add :NSMicrophoneUsageDescription string WING AutoTune uses audio input for PA measurements." "$PLIST" || true
+          /usr/libexec/PlistBuddy -c "Add :NSLocalNetworkUsageDescription string WING AutoTune connects to Behringer WING and your smartphone on the local network." "$PLIST" || true
+          /usr/libexec/PlistBuddy -c "Add :CFBundleIdentifier string com.tubeslave.wingautotune" "$PLIST" || true
+          /usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string 0.4" "$PLIST" || true
+          /usr/bin/codesign --force --deep --sign - "dist/WING AutoTune.app"
+      - name: Create DMG
+        working-directory: wing-autotune-mac
+        run: |
+          rm -rf dmgroot
+          mkdir dmgroot
+          cp -R "dist/WING AutoTune.app" dmgroot/
+          ln -s /Applications dmgroot/Applications
+          hdiutil create -volname "WING AutoTune" -srcfolder dmgroot -ov -format UDZO "WING_AutoTune_0.4.dmg"
+          shasum -a 256 "WING_AutoTune_0.4.dmg" > "WING_AutoTune_0.4.sha256"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WING_AutoTune_Mac_DMG
+          path: |
+            wing-autotune-mac/WING_AutoTune_0.4.dmg
+            wing-autotune-mac/WING_AutoTune_0.4.sha256
+          if-no-files-found: error
