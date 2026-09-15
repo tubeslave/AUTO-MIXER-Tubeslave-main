@@ -1,0 +1,5 @@
+numpy==2.2.6
+scipy==1.15.3
+sounddevice==0.5.2
+python-osc==1.9.3
+pyinstaller==6.15.0
